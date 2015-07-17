@@ -22,8 +22,6 @@
         // 添加一个灰色图片控件
         UIImageView *containerView = [[UIImageView alloc] init];
         containerView.image = [UIImage imageNamed:@"popover_background"];
-        containerView.width = 217;
-        containerView.height = 217;
         containerView.userInteractionEnabled = YES; // 开启交互
         [self addSubview:containerView];
         self.containerView = containerView;
@@ -56,10 +54,12 @@
     content.y = 15;
     
     // 调整内容的宽度
-    content.width = self.containerView.width - 2 * content.x;
+//    content.width = self.containerView.width - 2 * content.x;
     
     // 设置灰色的高度
-    self.containerView.height = CGRectGetMaxY(content.frame) + 10;
+    self.containerView.height = CGRectGetMaxY(content.frame) + 11;
+    // 设置灰色的宽度
+    self.containerView.width = CGRectGetMaxX(content.frame) + 10;
     
     // 添加内容到灰色图片中
     [self.containerView addSubview:content];
@@ -87,8 +87,12 @@
     self.frame = window.bounds;
     
     // 4.调整灰色图片的位置
-    self.containerView.x = (self.width - self.containerView.width) * 0.5;
-    self.containerView.y = 50;
+    // 默认情况下，frame是以父控件左上角为坐标原点
+    // 转换坐标系
+    CGRect newFrame = [from convertRect:from.bounds toView:window];
+//    CGRect newFrame = [from.superview convertRect:from.frame toView:window];
+    self.containerView.centerX = CGRectGetMidX(newFrame);
+    self.containerView.y = CGRectGetMaxY(newFrame);
 }
 
 /**
@@ -97,5 +101,10 @@
 - (void)dismiss
 {
     [self removeFromSuperview];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self dismiss];
 }
 @end

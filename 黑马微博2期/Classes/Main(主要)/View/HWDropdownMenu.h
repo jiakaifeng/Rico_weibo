@@ -28,5 +28,4 @@
  *  内容控制器
  */
 @property (nonatomic, strong) UIViewController *contentController;
-
 @end
