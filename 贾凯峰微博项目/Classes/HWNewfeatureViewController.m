@@ -7,6 +7,7 @@
 //
 
 #import "HWNewfeatureViewController.h"
+#import "HWTabBarViewController.h"
 
 @interface HWNewfeatureViewController ()<UIScrollViewDelegate>
 @property(nonatomic,weak)UIPageControl *pageconrol;
@@ -96,6 +97,7 @@
     entir.height=40;
     entir.centerX=self.view.width*0.5;
     entir.centerY=self.view.height-150;
+    [entir addTarget:self action:@selector(entireVIew) forControlEvents:UIControlEventTouchUpInside];
     [imageview addSubview:entir];
     
    
@@ -104,6 +106,16 @@
     share.selected=!share.isSelected;
 
 
+
+}
+
+-(void)entireVIew{
+    UIWindow *window=[UIApplication sharedApplication].keyWindow;
+    window.rootViewController=[[HWTabBarViewController alloc]init];
+
+
+}
+-(void)dealloc{
 
 }
 /*

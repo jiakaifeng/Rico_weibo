@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+IB_DESIGNABLE
 
 @interface HWTest1ViewController : UIViewController
 
