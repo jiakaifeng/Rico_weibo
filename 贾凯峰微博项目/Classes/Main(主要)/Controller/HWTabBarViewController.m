@@ -40,8 +40,8 @@
     [self addChildVc:profile title:@"我" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
     
   Hwtabbar *tabBar = [[Hwtabbar alloc] init];
-    tabBar.delegate = self;
     [self setValue:tabBar forKeyPath:@"tabBar"];
+    
 }
 
 /**

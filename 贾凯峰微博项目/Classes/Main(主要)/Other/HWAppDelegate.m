@@ -8,6 +8,7 @@
 
 #import "HWAppDelegate.h"
 #import "HWTabBarViewController.h"
+#import "HWNewfeatureViewController.h"
 
 @implementation HWAppDelegate
 
@@ -17,11 +18,32 @@
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     
+    //沙盒中储存的版本
+   NSString *lastVersion= [[NSUserDefaults standardUserDefaults]objectForKey:@"CFBundleVersion"];
+    //当前版本
+    NSString *CurrentVersion=[NSBundle mainBundle].infoDictionary[@"CFBundleVersion"];
+    NSLog(@"%@",CurrentVersion);
+   //储存进沙盒
+    
+    if ([CurrentVersion isEqualToString:lastVersion]) {
+        self.window.rootViewController=[[HWTabBarViewController alloc]init];
+    }else {
+    
+        self.window.rootViewController = [[HWNewfeatureViewController alloc] init];
+        [[NSUserDefaults standardUserDefaults]setObject:CurrentVersion forKey:@"CFBundleVersion"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    
+    //
+    
     // 2.设置根控制器
-    self.window.rootViewController = [[HWTabBarViewController alloc] init];
+    //self.window.rootViewController = [[HWNewfeatureViewController alloc] init];
+    //self.window.rootViewController=[[HWTabBarViewController alloc]init];
     
     // 4.显示窗口
     [self.window makeKeyAndVisible];
+
     return YES;
 }
 							
