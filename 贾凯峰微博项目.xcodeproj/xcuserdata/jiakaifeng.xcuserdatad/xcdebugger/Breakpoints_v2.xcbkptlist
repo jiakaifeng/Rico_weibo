@@ -89,13 +89,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Main(&#x4e3b;&#x8981;)/Other/HWAppDelegate.m"
-            timestampString = "459073342.536967"
+            filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/HWAutorViewController.m"
+            timestampString = "459153468.497401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "-webView:shouldStartLoadWithRequest:navigationType:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/HWAccount.m"
+            timestampString = "459152101.407049"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "+AccountwithDict:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -106,12 +122,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/HWAutorViewController.m"
-            timestampString = "459075985.151065"
+            timestampString = "459153468.497401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "-webView:shouldStartLoadWithRequest:navigationType:"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/HWAutorViewController.m"
+            timestampString = "459153349.883535"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "-accesswithcode:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
