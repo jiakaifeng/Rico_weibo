@@ -11,6 +11,7 @@
 #import "HWNewfeatureViewController.h"
 #import "HWAutorViewController.h"
 #import "HWAccount.h"
+#import "HWTool.h"
 
 @implementation HWAppDelegate
 
@@ -19,11 +20,8 @@
     // 1.创建窗口
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
-    NSString * doc =[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    //获得plist文件路径
-    NSString * path=[doc stringByAppendingPathComponent:@"account.plist"];
-    //从沙盒中取出数据
-    HWAccount *account=[NSKeyedUnarchiver unarchiveObjectWithFile:path];
+      //从沙盒中取出数据
+    HWAccount *account=[HWTool account];
         
     if (account) {
             //沙盒中储存的版本
@@ -43,8 +41,6 @@
         
     }else{
         self.window.rootViewController=[[HWAutorViewController alloc]init];
-    
-    
     
     
     }

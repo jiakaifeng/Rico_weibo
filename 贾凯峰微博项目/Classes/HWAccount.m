@@ -12,17 +12,20 @@
 
 +(instancetype)AccountwithDict:(NSDictionary *)dict
 {
-    HWAccount * Account=[[self alloc]init];
-    Account.uid=dict[@"uid"];
-    Account.access_token=dict[@"access_token"];
-    Account.expires_in=dict[@"expires_in"];
-    return Account;
+    HWAccount * account=[[self alloc]init];
+    account.uid=dict[@"uid"];
+    account.access_token=dict[@"access_token"];
+    account.expires_in=dict[@"expires_in"];
+    return account;
 }
 //归档，选择数据存入沙盒
 -(void)encodeWithCoder:(NSCoder *)aCoder{
     [aCoder encodeObject:self.access_token forKey:@"access_token"];
     [aCoder encodeObject:self.uid forKey:@"uid"];
     [aCoder encodeObject:self.expires_in forKey:@"expires_in"];
+    [aCoder encodeObject:self.creattime forKey:@"creattime"];
+
+    
 
 }
 //从沙河中解当对象
@@ -31,6 +34,8 @@
         self.access_token=[aDecoder decodeObjectForKey:@"access_token"];
         self.uid=[aDecoder decodeObjectForKey:@"uid"];
         self.expires_in=[aDecoder decodeObjectForKey:@"expires_in"];
+        self.creattime=[aDecoder decodeObjectForKey:@"creattime"];
+
 
     }
     return self;

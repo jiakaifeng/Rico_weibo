@@ -13,6 +13,7 @@
 #import "HWAccount.h"
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+MJ.h"
+#import "HWTool.h"
 @interface HWAutorViewController ()<UIWebViewDelegate>
 
 @end
@@ -76,9 +77,11 @@
     [manger POST:@"https://api.weibo.com/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary* responseObject) {
         //沙盒路径
         NSString * doc =[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-        NSString * path=[doc stringByAppendingPathComponent:@"account.plist"];
-        //创建模型
+        NSString * path=[doc stringByAppendingPathComponent:@"account.archive"];
+        //创建模型，存入沙盒
         HWAccount *Account=[HWAccount AccountwithDict:responseObject];
+        //储存账号模型
+        [HWTool saveaccount:Account];
         //自定义将对象储存进沙盒
         [NSKeyedArchiver archiveRootObject:Account toFile:path];
         //创建版本

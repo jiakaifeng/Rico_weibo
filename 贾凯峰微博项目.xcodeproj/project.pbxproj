@@ -52,6 +52,7 @@
 		B12588361B5E1E0E0027D238 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = B12588321B5E1E0E0027D238 /* MBProgressHUD+MJ.m */; };
 		B12588371B5E1E0E0027D238 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B12588331B5E1E0E0027D238 /* MBProgressHUD.bundle */; };
 		B12588381B5E1E0E0027D238 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B12588351B5E1E0E0027D238 /* MBProgressHUD.m */; };
+		B125883C1B5E29640027D238 /* HWTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B125883B1B5E29640027D238 /* HWTool.m */; };
 		B1604DD81B58E8FD008DFE93 /* HWNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1604DD71B58E8FD008DFE93 /* HWNewfeatureViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +146,8 @@
 		B12588331B5E1E0E0027D238 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		B12588341B5E1E0E0027D238 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		B12588351B5E1E0E0027D238 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		B125883A1B5E29640027D238 /* HWTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTool.h; sourceTree = "<group>"; };
+		B125883B1B5E29640027D238 /* HWTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTool.m; sourceTree = "<group>"; };
 		B1604DD61B58E8FD008DFE93 /* HWNewfeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWNewfeatureViewController.h; sourceTree = "<group>"; };
 		B1604DD71B58E8FD008DFE93 /* HWNewfeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWNewfeatureViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -485,6 +488,7 @@
 		B125880A1B5CE2DB0027D238 /* 登入界面 */ = {
 			isa = PBXGroup;
 			children = (
+				B12588391B5E29490027D238 /* Tool */,
 				B125882C1B5E14EE0027D238 /* Model */,
 				B125880B1B5CE2E20027D238 /* control */,
 			);
@@ -546,6 +550,15 @@
 			);
 			name = MBProgressHUD;
 			path = "../../Home(首页)/View/MBProgressHUD";
+			sourceTree = "<group>";
+		};
+		B12588391B5E29490027D238 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				B125883A1B5E29640027D238 /* HWTool.h */,
+				B125883B1B5E29640027D238 /* HWTool.m */,
+			);
+			name = Tool;
 			sourceTree = "<group>";
 		};
 		B1604DD41B58E8B1008DFE93 /* Newfeature */ = {
@@ -680,6 +693,7 @@
 				B12588231B5CF3D40027D238 /* AFHTTPRequestOperation.m in Sources */,
 				189B5CEA19E3DC5300C3CEB4 /* HWItemTool.m in Sources */,
 				B1604DD81B58E8FD008DFE93 /* HWNewfeatureViewController.m in Sources */,
+				B125883C1B5E29640027D238 /* HWTool.m in Sources */,
 				18728EC019E3D91D008F3BFE /* HWDiscoverViewController.m in Sources */,
 				B12588381B5E1E0E0027D238 /* MBProgressHUD.m in Sources */,
 				B125882F1B5E15150027D238 /* HWAccount.m in Sources */,
