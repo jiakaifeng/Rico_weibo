@@ -13,7 +13,6 @@
 +(void)saveaccount:(HWAccount *)account{
 
    
-    account.creattime=[NSDate date];
     //创建模型
     //自定义将对象储存进沙盒
     [NSKeyedArchiver archiveRootObject:account toFile:HWAccountPath];
@@ -21,19 +20,11 @@
 }
 +(HWAccount *)account{
 
-    //创建模型
+    //
     HWAccount *account=[NSKeyedUnarchiver unarchiveObjectWithFile:HWAccountPath];
-    
-    long long expires_in=[account.expires_in longLongValue];
-    NSDate *expressTime=[account.creattime dateByAddingTimeInterval:expires_in];
-    NSDate *now=[NSDate date];
-    //比较时间
-    NSComparisonResult  result= [expressTime compare:now];
-    if (result!=NSOrderedAscending) {
-        return nil;
-    }
+
+ 
     return account;
-    HWLog(@"shijian -%@---%@",expressTime,now);
 
 
 

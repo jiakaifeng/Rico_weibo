@@ -16,9 +16,8 @@
 @property (nonatomic, strong) NSNumber *expires_in;
 
 @property (nonatomic, copy) NSString *access_token;
-@property (nonatomic, copy) NSDate *creattime;
 
-
+@property(nonatomic,copy)NSString *name;
 
 +(instancetype)AccountwithDict:(NSDictionary *)dict;
 
