@@ -84,6 +84,8 @@
 		B12794AA1B5F8D6B00538C6B /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B127949E1B5F8D6B00538C6B /* NSObject+MJKeyValue.m */; };
 		B12794AB1B5F8D6B00538C6B /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = B12794A01B5F8D6B00538C6B /* NSObject+MJMember.m */; };
 		B1604DD81B58E8FD008DFE93 /* HWNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1604DD71B58E8FD008DFE93 /* HWNewfeatureViewController.m */; };
+		B1D5DB371B60CBFE006432D5 /* HWFootreload.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D5DB361B60CBFE006432D5 /* HWFootreload.m */; };
+		B1D5DB391B60CC26006432D5 /* HWFootreload.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D5DB381B60CC26006432D5 /* HWFootreload.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,6 +243,9 @@
 		B12794A01B5F8D6B00538C6B /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
 		B1604DD61B58E8FD008DFE93 /* HWNewfeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWNewfeatureViewController.h; sourceTree = "<group>"; };
 		B1604DD71B58E8FD008DFE93 /* HWNewfeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWNewfeatureViewController.m; sourceTree = "<group>"; };
+		B1D5DB351B60CBFE006432D5 /* HWFootreload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWFootreload.h; sourceTree = "<group>"; };
+		B1D5DB361B60CBFE006432D5 /* HWFootreload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWFootreload.m; sourceTree = "<group>"; };
+		B1D5DB381B60CC26006432D5 /* HWFootreload.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HWFootreload.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,6 +423,9 @@
 			children = (
 				1839F66C19E4E67900280C20 /* HWTitleMenuViewController.h */,
 				1839F66D19E4E67900280C20 /* HWTitleMenuViewController.m */,
+				B1D5DB351B60CBFE006432D5 /* HWFootreload.h */,
+				B1D5DB361B60CBFE006432D5 /* HWFootreload.m */,
+				B1D5DB381B60CC26006432D5 /* HWFootreload.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -826,6 +834,7 @@
 			files = (
 				18728ECA19E3D91D008F3BFE /* HWTest1ViewController.xib in Resources */,
 				18728E4319E37EB8008F3BFE /* Images.xcassets in Resources */,
+				B1D5DB391B60CC26006432D5 /* HWFootreload.xib in Resources */,
 				18728ECC19E3D91D008F3BFE /* HWTest2ViewController.xib in Resources */,
 				18728E3519E37EB8008F3BFE /* InfoPlist.strings in Resources */,
 				18728ECE19E3D91D008F3BFE /* HWTest3ViewController.xib in Resources */,
@@ -871,6 +880,7 @@
 				189B5CEA19E3DC5300C3CEB4 /* HWItemTool.m in Sources */,
 				B1604DD81B58E8FD008DFE93 /* HWNewfeatureViewController.m in Sources */,
 				B12794821B5F6AB600538C6B /* UIImage+WebP.m in Sources */,
+				B1D5DB371B60CBFE006432D5 /* HWFootreload.m in Sources */,
 				B125883C1B5E29640027D238 /* HWTool.m in Sources */,
 				B12794A31B5F8D6B00538C6B /* MJFoundation.m in Sources */,
 				B12794A91B5F8D6B00538C6B /* NSObject+MJCoding.m in Sources */,

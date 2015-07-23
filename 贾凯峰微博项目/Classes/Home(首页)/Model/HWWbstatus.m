@@ -15,7 +15,6 @@
     status.idstr=dict[@"idstr"];
     status.text=dict[@"text"];
     status.user=[HWUserinfo userwithdDict:dict[@"user"]];
-    
     return status;
 
 }

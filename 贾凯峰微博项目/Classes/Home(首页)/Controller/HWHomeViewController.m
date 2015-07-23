@@ -18,12 +18,13 @@
 #import "HWWbstatus.h"
 #import "HWUserinfo.h"
 #import "MJExtension.h"
+#import "HWFootreload.h"
 @interface HWHomeViewController ()<HWDropdownMenudelegate>
 @property(nonatomic,strong)NSMutableArray *states;
 @end
 
 @implementation HWHomeViewController
-
+  //懒加载，当使用时加载
 -(NSMutableArray *)states{
 
 
@@ -33,50 +34,117 @@
     return _states;
 
 }
+
 - (void)viewDidLoad{
     
         [super viewDidLoad];
-         [MBProgressHUD showMessage:@"正在加载中"];
-
+        [MBProgressHUD showMessage:@"正在加载中"];
         [self setupnav];
         [self setupUserInfo];
-        [self loadWeibo];
-       [MBProgressHUD hideHUD];
-
-
+       [self loadWeibo];
+       [self setupRefresh];
+    [self setupuprefresh];
     
 }
--(void)loadWeibo{
-//    
-//    必选	类型及范围	说明
-//    access_token	false	string	采用OAuth授权方式为必填参数，其他授权方式不需要此参数，OAuth授权后获得。
-//    since_id	false	int64	若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0。
-//    max_id	false	int64	若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
-//    count	false	int	单页返回的记录条数，最大不超过100，默认为20。
-//    page	false	int	返回结果的页码，默认为1。
-//    base_app	false	int	是否只获取当前应用的数据。0为否（所有数据），1为是（仅当前应用），默认为0。
-//    feature	false	int	过滤类型ID，0：全部、1：原创、2：图片、3：视频、4：音乐，默认为0。
-//    trim_user	false	int	返回值中user字段开关，0：返回完整user字段、1：user字段仅返回user_id，默认为0。
+-(void)setupuprefresh{
+
+    self.tableView.tableFooterView=[HWFootreload footreload];
+
+
+}
+-(void)setupRefresh{
+    UIRefreshControl *Refresh=[[UIRefreshControl alloc]init];
+    [Refresh addTarget:self action:@selector(refreshchange:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:Refresh];
+
+}
+-(void)refreshchange:(UIRefreshControl *)Refresh{
+
     HWAccount * account=[HWTool account];
+    //使用afnetworking，创建管理者
     AFHTTPRequestOperationManager *manger=[AFHTTPRequestOperationManager manager];
+    //创建字典，接收数据
     NSMutableDictionary *params=[NSMutableDictionary dictionary];
     params[@"access_token"]=account.access_token;
-    
+    HWWbstatus *firststatus=[self.states firstObject];
+    params[@"since_id"]=firststatus.idstr;
+    //发送数据
     [manger GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary * responseObject) {
-        HWLog(@"请求成功--%@",responseObject);
-        NSArray *dictArry=responseObject[@"statuses"];
-        for (NSDictionary *dic in dictArry) {
-            HWWbstatus *status=[HWWbstatus objectWithKeyValues:dic];
-            [self.states addObject:status];
-        }
+        //将微博的字典转为微博模型数组
+        NSArray *newStatus=[HWWbstatus objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        NSRange range=NSMakeRange(0, newStatus.count);
+        NSIndexSet *set=[NSIndexSet indexSetWithIndexesInRange:range];
+        [self.states insertObjects:newStatus atIndexes:set];
+        //tableview 更新数据
         [self.tableView reloadData];
+        [self showWeiboCount:newStatus.count];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        HWLog(@"请求失败--%@",error);
+        
+    }];
+    
+
+    [Refresh endRefreshing];
+
+
+}
+-(void)showWeiboCount:(NSUInteger)count{
+    UILabel *weibocount=[[UILabel alloc]init];
+    weibocount.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"timeline_new_status_background"]];
+    weibocount.width=[UIScreen mainScreen].bounds.size.width;
+    weibocount.height=30;
+    if (count==0) {
+        weibocount.text=@"没有新微博";
+        
+    }else{
+    weibocount.text=[NSString stringWithFormat:@"共有%lu条新微博",(unsigned long)count];
  
+    }
+    weibocount.textColor=[UIColor whiteColor];
+    weibocount.textAlignment=NSTextAlignmentCenter;
+    weibocount.font=[UIFont systemFontOfSize:16];
+    weibocount.y=64-weibocount.height;
+    
+    [self.navigationController.view insertSubview:weibocount belowSubview:self.navigationController.navigationBar];
+    [UIView animateWithDuration:1 animations:^{
+        weibocount.transform=CGAffineTransformMakeTranslation(0, weibocount.height);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:1 delay:1 options:UIViewAnimationOptionCurveLinear animations:^{
+            weibocount.transform=CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            [weibocount removeFromSuperview];
+        }];
+    }];
+
+
+}
+ ///获取用户关注人的数据
+-(void)loadWeibo{
+    //调用工具类的方法，取出其中储存的access_token 的数据
+    HWAccount * account=[HWTool account];
+    //使用afnetworking，创建管理者
+    AFHTTPRequestOperationManager *manger=[AFHTTPRequestOperationManager manager];
+    //创建字典，接收数据
+    NSMutableDictionary *params=[NSMutableDictionary dictionary];
+    params[@"access_token"]=account.access_token;
+
+    //发送数据
+    [manger GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary * responseObject) {
+        //将微博的字典转为微博模型数组
+        NSArray *newStatus=[HWWbstatus objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        //添加新数据
+        [self.states addObjectsFromArray:newStatus];
+         //tableview 更新数据
+        [self.tableView reloadData];
+
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         HWLog(@"请求失败--%@",error);
         
     }];
 
+    [MBProgressHUD hideHUD];
 
 
 }
@@ -118,8 +186,6 @@
     UIButton *titleButton = [[UIButton alloc] init];
     titleButton.width = 150;
     titleButton.height = 30;
-    
-    
     // 设置图片和文字
     if (account) {
         [titleButton setTitle:account.name forState:UIControlStateNormal];
@@ -130,14 +196,11 @@
     [titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     titleButton.titleLabel.font = [UIFont boldSystemFontOfSize:17];
     [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
-    
     titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 90, 0, 0);
     titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
-    
-    // 监听标题点击
+        // 监听标题点击
     [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.navigationItem.titleView = titleButton;
+        self.navigationItem.titleView = titleButton;
     // 如果图片的某个方向上不规则，比如有突起，那么这个方向就不能拉伸
 }
     /**
@@ -174,25 +237,24 @@
 
 -(void)dropdownmenudismiss:(HWDropdownMenu *)menu{
     UIButton *titleButton=(UIButton*) self.navigationItem.titleView;
-    
     [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
 
 }
-
-    
- - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
     {
-        // Return the number of rows in the section.
         return self.states.count;
     }
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *ID=@"status";
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
     }
+    //所选微博数据
     HWWbstatus *status=self.states[indexPath.row];
     HWUserinfo *user=status.user;
+    //cell 数据变化
     cell.detailTextLabel.text=status.text;
     cell.textLabel.text=user.name;
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];

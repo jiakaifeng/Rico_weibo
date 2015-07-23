@@ -18,7 +18,6 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -27,23 +26,17 @@
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -53,15 +46,18 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
     }
-    
+    [cell setBackgroundColor:[UIColor clearColor]];
     if (indexPath.row == 0) {
         cell.textLabel.text = @"好友";
     } else if (indexPath.row == 1) {
         cell.textLabel.text = @"密友";
     } else if (indexPath.row == 2) {
+        cell.textLabel.text = @"特别关注";
+    }else if (indexPath.row == 3) {
+        cell.textLabel.text = @"名人";
+    }else if (indexPath.row == 4) {
         cell.textLabel.text = @"全部";
     }
-    
     return cell;
 }
 @end

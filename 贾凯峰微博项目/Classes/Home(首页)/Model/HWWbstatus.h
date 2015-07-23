@@ -12,6 +12,8 @@
 @property(nonatomic,copy)NSString *idstr;
 @property(nonatomic,copy)NSString *text;
 @property(nonatomic,retain)HWUserinfo * user;
+
+
 +(instancetype)statwithDict:(NSDictionary *)dict;
 
 

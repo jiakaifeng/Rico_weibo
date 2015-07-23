@@ -73,22 +73,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/Controller/HWHomeViewController.m"
-            timestampString = "459247069.698577"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "-states"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/HWAutorViewController.m"
             timestampString = "459156704.423574"
             startingColumnNumber = "9223372036854775807"
@@ -282,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/Controller/HWHomeViewController.m"
-            timestampString = "459247069.698577"
+            timestampString = "459329291.992948"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "-titleClick:"
             landmarkType = "5">
          </BreakpointContent>
@@ -298,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/Controller/HWHomeViewController.m"
-            timestampString = "459247069.698577"
+            timestampString = "459329291.992948"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>

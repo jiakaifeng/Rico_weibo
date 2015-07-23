@@ -11,7 +11,6 @@
 @interface HWUserinfo : NSObject
 //idstr	string	字符串型的用户UID
 @property(nonatomic,copy)NSString *idstr;
-//screen_name	string	用户昵称
 @property(nonatomic,copy)NSString *profile_image_url;
 //name	string	友好显示名称;
 @property(nonatomic,copy)NSString *name;
