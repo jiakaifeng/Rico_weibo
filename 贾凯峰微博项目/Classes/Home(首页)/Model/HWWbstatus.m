@@ -10,14 +10,6 @@
 #import "HWUserinfo.h"
 @implementation HWWbstatus
 
-+(instancetype)statwithDict:(NSDictionary *)dict{
-    HWWbstatus *status=[[self alloc]init];
-    status.idstr=dict[@"idstr"];
-    status.text=dict[@"text"];
-    status.user=[HWUserinfo userwithdDict:dict[@"user"]];
-    return status;
-
-}
 
 
 @end

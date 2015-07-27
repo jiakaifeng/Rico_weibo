@@ -12,9 +12,11 @@
 @property(nonatomic,copy)NSString *idstr;
 @property(nonatomic,copy)NSString *text;
 @property(nonatomic,retain)HWUserinfo * user;
+@property (nonatomic, copy) NSString *created_at;
 
+/**	string	微博来源*/
+@property (nonatomic, copy) NSString *source;
 
-+(instancetype)statwithDict:(NSDictionary *)dict;
 
 
 @end

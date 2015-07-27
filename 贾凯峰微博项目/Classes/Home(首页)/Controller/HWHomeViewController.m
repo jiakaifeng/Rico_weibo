@@ -19,33 +19,114 @@
 #import "HWUserinfo.h"
 #import "MJExtension.h"
 #import "HWFootreload.h"
+#import "MJRefresh.h"
+#import "UIView+Extension.h"
+#import"HWStatusCell.h"
+#import "HWWbstatusFrame.h"
 @interface HWHomeViewController ()<HWDropdownMenudelegate>
-@property(nonatomic,strong)NSMutableArray *states;
+@property(nonatomic,strong)NSMutableArray *statesFrame;
+@property(nonatomic,assign)NSInteger currentPage;
 @end
 
 @implementation HWHomeViewController
   //懒加载，当使用时加载
--(NSMutableArray *)states{
+-(NSMutableArray *)statesFrame{
 
 
-    if (!_states) {
-        self.states=[NSMutableArray array];
+    if (!_statesFrame) {
+        self.statesFrame=[NSMutableArray array];
     }
-    return _states;
+    return _statesFrame;
 
 }
 
 - (void)viewDidLoad{
     
         [super viewDidLoad];
-        [MBProgressHUD showMessage:@"正在加载中"];
         [self setupnav];
         [self setupUserInfo];
-       [self loadWeibo];
-       [self setupRefresh];
-    [self setupuprefresh];
+        //[self loadWeibo];
+        [self setupRefresh];
+        [self.tableView addFooterWithTarget:self action:@selector(loadmorweibo)];
+        NSTimer *timer=[NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(setupremindweibo) userInfo:nil repeats:YES];
+        [[NSRunLoop mainRunLoop]addTimer:timer forMode:NSRunLoopCommonModes];
     
 }
+-(void)setupremindweibo{
+
+    HWAccount * account=[HWTool account];
+    //使用afnetworking，创建管理者
+    AFHTTPRequestOperationManager *manger=[AFHTTPRequestOperationManager manager];
+    //创建字典，接收数据
+    NSMutableDictionary *params=[NSMutableDictionary dictionary];
+    params[@"access_token"]=account.access_token;
+    params[@"uid"]=account.uid;
+
+    //发送数据
+    [manger GET:@"https://rm.api.weibo.com/2/remind/unread_count.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary * responseObject) {
+        NSString*status =[responseObject[@"status"] description];
+        if ([status isEqualToString:@"0"]) {
+            self.tabBarItem.badgeValue=nil;
+            [UIApplication sharedApplication].applicationIconBadgeNumber=0;
+        }else{
+            self.tabBarItem.badgeValue=status;
+            [UIApplication sharedApplication].applicationIconBadgeNumber=status.intValue;
+
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        HWLog(@"请求失败--%@",error);
+        
+    }];
+    
+
+
+}
+-(void)loadmorweibo{
+    HWAccount * account=[HWTool account];
+    //使用afnetworking，创建管理者
+    AFHTTPRequestOperationManager *manger=[AFHTTPRequestOperationManager manager];
+    //创建字典，接收数据
+    NSMutableDictionary *params=[NSMutableDictionary dictionary];
+    params[@"access_token"]=account.access_token;
+    HWWbstatusFrame *laststatus=[self.statesFrame lastObject];
+    if (laststatus) {
+        // 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
+        // id这种数据一般都是比较大的，一般转成整数的话，最好是long long类型
+        long long maxId = laststatus.status.idstr.longLongValue - 1;
+        params[@"max_id"] = @(maxId);
+    }
+    //发送数据
+    [manger GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary * responseObject) {
+        //将微博的字典转为微博模型数组
+        NSArray *newStatuses = [HWWbstatus objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        NSArray *newFrames=[self statusframewithstatus:newStatuses];
+
+        [self.statesFrame addObjectsFromArray:newFrames];
+        //tableview 更新数据
+        [self.tableView reloadData];
+        [self.tableView footerEndRefreshing];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        HWLog(@"请求失败--%@",error);
+        
+    }];
+    
+
+
+
+}
+
+-(NSArray *)statusframewithstatus:(NSArray *)Status{
+    NSMutableArray *Frames=[NSMutableArray array];
+    for (HWWbstatus *status in Status) {
+        HWWbstatusFrame *statesframe=[[HWWbstatusFrame alloc]init];
+        statesframe.status=status;
+        [Frames addObject:statesframe];
+    }
+    return Frames;
+}
+
 -(void)setupuprefresh{
 
     self.tableView.tableFooterView=[HWFootreload footreload];
@@ -56,6 +137,11 @@
     UIRefreshControl *Refresh=[[UIRefreshControl alloc]init];
     [Refresh addTarget:self action:@selector(refreshchange:) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:Refresh];
+    
+    // 2.马上进入刷新状态(仅仅是显示刷新状态，并不会触发UIControlEventValueChanged事件)
+    [Refresh beginRefreshing];
+    [self refreshchange:Refresh];
+    
 
 }
 -(void)refreshchange:(UIRefreshControl *)Refresh{
@@ -66,19 +152,26 @@
     //创建字典，接收数据
     NSMutableDictionary *params=[NSMutableDictionary dictionary];
     params[@"access_token"]=account.access_token;
-    HWWbstatus *firststatus=[self.states firstObject];
-    params[@"since_id"]=firststatus.idstr;
+    HWWbstatusFrame*firststatus=[self.statesFrame firstObject];
+    if (firststatus) {
+          params[@"since_id"]=firststatus.status.idstr;
+    }
     //发送数据
     [manger GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary * responseObject) {
         //将微博的字典转为微博模型数组
         NSArray *newStatus=[HWWbstatus objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
-        NSRange range=NSMakeRange(0, newStatus.count);
+        NSArray *newFrames=[self statusframewithstatus:newStatus];
+        NSRange range=NSMakeRange(0, newFrames.count);
         NSIndexSet *set=[NSIndexSet indexSetWithIndexesInRange:range];
-        [self.states insertObjects:newStatus atIndexes:set];
+        [self.statesFrame insertObjects:newFrames atIndexes:set];
         //tableview 更新数据
         [self.tableView reloadData];
+        [Refresh endRefreshing];
         [self showWeiboCount:newStatus.count];
         
+        self.tabBarItem.badgeValue=nil;
+        [UIApplication sharedApplication].applicationIconBadgeNumber=0;
+    
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         HWLog(@"请求失败--%@",error);
         
@@ -87,7 +180,7 @@
 
     [Refresh endRefreshing];
 
-
+    
 }
 -(void)showWeiboCount:(NSUInteger)count{
     UILabel *weibocount=[[UILabel alloc]init];
@@ -120,34 +213,6 @@
 
 }
  ///获取用户关注人的数据
--(void)loadWeibo{
-    //调用工具类的方法，取出其中储存的access_token 的数据
-    HWAccount * account=[HWTool account];
-    //使用afnetworking，创建管理者
-    AFHTTPRequestOperationManager *manger=[AFHTTPRequestOperationManager manager];
-    //创建字典，接收数据
-    NSMutableDictionary *params=[NSMutableDictionary dictionary];
-    params[@"access_token"]=account.access_token;
-
-    //发送数据
-    [manger GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary * responseObject) {
-        //将微博的字典转为微博模型数组
-        NSArray *newStatus=[HWWbstatus objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
-        //添加新数据
-        [self.states addObjectsFromArray:newStatus];
-         //tableview 更新数据
-        [self.tableView reloadData];
-
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        HWLog(@"请求失败--%@",error);
-        
-    }];
-
-    [MBProgressHUD hideHUD];
-
-
-}
 -(void)setupUserInfo{
 //https://api.weibo.com/2/users/show.json
 //    access_token	false	string	采用OAuth授权方式为必填参数，其他授权方式不需要此参数，OAuth授权后获得。
@@ -242,23 +307,28 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
     {
-        return self.states.count;
+        return self.statesFrame.count;
     }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *ID=@"status";
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
+    HWStatusCell *cell=[HWStatusCell cellwithtableview:tableView];
     //所选微博数据
-    HWWbstatus *status=self.states[indexPath.row];
-    HWUserinfo *user=status.user;
+    cell.statusFrame=self.statesFrame[indexPath.row];
+   // HWWbstatus *status=self.states[indexPath.row];
+  //  HWUserinfo *user=status.user;
     //cell 数据变化
-    cell.detailTextLabel.text=status.text;
-    cell.textLabel.text=user.name;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
+//    cell.detailTextLabel.text=status.text;
+//    cell.textLabel.text=user.name;
+//    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
     
     return cell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    HWWbstatusFrame *statusFrame=self.statesFrame[indexPath.row];
+   
+    return statusFrame.cellheight;
+
+
+
 }
 @end

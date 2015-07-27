@@ -10,6 +10,12 @@
 
 @implementation HWUserinfo
 
+-(void)setMbtype:(int)mbtype{
+    _mbtype=mbtype;
+    self.vip=mbtype>2;
+
+
+}
 +(instancetype)userwithdDict:(NSDictionary *)dict{
     HWUserinfo *user=[[self alloc]init];
     user.idstr=dict[@"idstr"];

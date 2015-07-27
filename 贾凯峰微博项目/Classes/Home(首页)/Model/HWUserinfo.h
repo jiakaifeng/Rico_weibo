@@ -15,6 +15,11 @@
 //name	string	友好显示名称;
 @property(nonatomic,copy)NSString *name;
 
+@property(nonatomic,assign)int mbtype;
+@property(nonatomic,assign)int mbrank;
+@property(nonatomic,assign,getter=isvip)BOOL vip;
 //profile_image_url	string	用户头像地址（中图），50×50像素
 +(instancetype)userwithdDict:(NSDictionary *)dict;
+
+
 @end
