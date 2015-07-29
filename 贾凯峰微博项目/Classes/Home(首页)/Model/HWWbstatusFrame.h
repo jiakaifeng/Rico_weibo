@@ -15,6 +15,7 @@
 #define HWStatusCellSourceFont HWStatusCellTimeFont
 // 正文字体
 #define HWStatusCellContentFont [UIFont systemFontOfSize:14]
+#define HWStatusCellRetweetContentFont [UIFont systemFontOfSize:13]
 
 @class HWWbstatus;
 @interface HWWbstatusFrame : NSObject
@@ -28,4 +29,14 @@
 @property(nonatomic,assign)CGRect sourseLable;
 @property(nonatomic,assign)CGRect weiboLable;
 @property(nonatomic,assign)CGFloat cellheight;
+
+
+@property(nonatomic,assign)CGRect  repostView;
+@property(nonatomic,assign)CGRect  repostphoto;
+@property(nonatomic,assign)CGRect repostweibo;
+
+
+@property(nonatomic,assign)CGRect toolbar;
+
+
 @end

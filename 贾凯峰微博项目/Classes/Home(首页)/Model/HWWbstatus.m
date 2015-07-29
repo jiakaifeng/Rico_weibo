@@ -8,8 +8,18 @@
 
 #import "HWWbstatus.h"
 #import "HWUserinfo.h"
+#import "MJExtension.h"
+#import "HWphoto.h"
 @implementation HWWbstatus
+-(NSDictionary *)objectClassInArray{
 
+    return @{@"pic_urls": [HWphoto class]};
 
+}
+-(NSString *)created_at{
+NSDate *date=
+return <#expression#>
+
+}
 
 @end

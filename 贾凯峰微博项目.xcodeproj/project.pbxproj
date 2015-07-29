@@ -84,11 +84,10 @@
 		B12794AA1B5F8D6B00538C6B /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B127949E1B5F8D6B00538C6B /* NSObject+MJKeyValue.m */; };
 		B12794AB1B5F8D6B00538C6B /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = B12794A01B5F8D6B00538C6B /* NSObject+MJMember.m */; };
 		B1604DD81B58E8FD008DFE93 /* HWNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1604DD71B58E8FD008DFE93 /* HWNewfeatureViewController.m */; };
+		B181D6581B686B60003C7CDA /* HWtoobar.m in Sources */ = {isa = PBXBuildFile; fileRef = B181D6571B686B60003C7CDA /* HWtoobar.m */; };
 		B1ADA4FA1B65C96B00F990FB /* HWWbstatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ADA4F91B65C96B00F990FB /* HWWbstatusFrame.m */; };
+		B1ADA4FD1B661B5B00F990FB /* HWphoto.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ADA4FC1B661B5B00F990FB /* HWphoto.m */; };
 		B1CA787D1B62181D0090A002 /* HWStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CA787B1B62181D0090A002 /* HWStatusCell.m */; };
-		B1CA787E1B62181D0090A002 /* HWStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1CA787C1B62181D0090A002 /* HWStatusCell.xib */; };
-		B1D5DB371B60CBFE006432D5 /* HWFootreload.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D5DB361B60CBFE006432D5 /* HWFootreload.m */; };
-		B1D5DB391B60CC26006432D5 /* HWFootreload.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D5DB381B60CC26006432D5 /* HWFootreload.xib */; };
 		B1D5DB4B1B60DB72006432D5 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B1D5DB3B1B60DB72006432D5 /* MJRefresh.bundle */; };
 		B1D5DB4C1B60DB72006432D5 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D5DB3E1B60DB72006432D5 /* MJRefreshBaseView.m */; };
 		B1D5DB4D1B60DB72006432D5 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D5DB401B60DB72006432D5 /* MJRefreshConst.m */; };
@@ -254,14 +253,14 @@
 		B12794A01B5F8D6B00538C6B /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
 		B1604DD61B58E8FD008DFE93 /* HWNewfeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWNewfeatureViewController.h; sourceTree = "<group>"; };
 		B1604DD71B58E8FD008DFE93 /* HWNewfeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWNewfeatureViewController.m; sourceTree = "<group>"; };
+		B181D6561B686B60003C7CDA /* HWtoobar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWtoobar.h; sourceTree = "<group>"; };
+		B181D6571B686B60003C7CDA /* HWtoobar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWtoobar.m; sourceTree = "<group>"; };
 		B1ADA4F81B65C96B00F990FB /* HWWbstatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWbstatusFrame.h; sourceTree = "<group>"; };
 		B1ADA4F91B65C96B00F990FB /* HWWbstatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWbstatusFrame.m; sourceTree = "<group>"; };
+		B1ADA4FB1B661B5B00F990FB /* HWphoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWphoto.h; sourceTree = "<group>"; };
+		B1ADA4FC1B661B5B00F990FB /* HWphoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWphoto.m; sourceTree = "<group>"; };
 		B1CA787A1B62181D0090A002 /* HWStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWStatusCell.h; sourceTree = "<group>"; };
 		B1CA787B1B62181D0090A002 /* HWStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWStatusCell.m; sourceTree = "<group>"; };
-		B1CA787C1B62181D0090A002 /* HWStatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HWStatusCell.xib; sourceTree = "<group>"; };
-		B1D5DB351B60CBFE006432D5 /* HWFootreload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWFootreload.h; sourceTree = "<group>"; };
-		B1D5DB361B60CBFE006432D5 /* HWFootreload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWFootreload.m; sourceTree = "<group>"; };
-		B1D5DB381B60CC26006432D5 /* HWFootreload.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HWFootreload.xib; sourceTree = "<group>"; };
 		B1D5DB3B1B60DB72006432D5 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
 		B1D5DB3C1B60DB72006432D5 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
 		B1D5DB3D1B60DB72006432D5 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
@@ -444,6 +443,8 @@
 			children = (
 				B12794861B5F6ED000538C6B /* HWWbstatus.h */,
 				B12794871B5F6ED000538C6B /* HWWbstatus.m */,
+				B1ADA4FB1B661B5B00F990FB /* HWphoto.h */,
+				B1ADA4FC1B661B5B00F990FB /* HWphoto.m */,
 				B127944F1B5F34DF00538C6B /* HWUserinfo.h */,
 				B12794501B5F34DF00538C6B /* HWUserinfo.m */,
 				B1ADA4F81B65C96B00F990FB /* HWWbstatusFrame.h */,
@@ -457,12 +458,10 @@
 			children = (
 				1839F66C19E4E67900280C20 /* HWTitleMenuViewController.h */,
 				1839F66D19E4E67900280C20 /* HWTitleMenuViewController.m */,
-				B1D5DB351B60CBFE006432D5 /* HWFootreload.h */,
-				B1D5DB361B60CBFE006432D5 /* HWFootreload.m */,
-				B1D5DB381B60CC26006432D5 /* HWFootreload.xib */,
 				B1CA787A1B62181D0090A002 /* HWStatusCell.h */,
 				B1CA787B1B62181D0090A002 /* HWStatusCell.m */,
-				B1CA787C1B62181D0090A002 /* HWStatusCell.xib */,
+				B181D6561B686B60003C7CDA /* HWtoobar.h */,
+				B181D6571B686B60003C7CDA /* HWtoobar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -896,8 +895,6 @@
 			files = (
 				18728ECA19E3D91D008F3BFE /* HWTest1ViewController.xib in Resources */,
 				18728E4319E37EB8008F3BFE /* Images.xcassets in Resources */,
-				B1D5DB391B60CC26006432D5 /* HWFootreload.xib in Resources */,
-				B1CA787E1B62181D0090A002 /* HWStatusCell.xib in Resources */,
 				18728ECC19E3D91D008F3BFE /* HWTest2ViewController.xib in Resources */,
 				18728E3519E37EB8008F3BFE /* InfoPlist.strings in Resources */,
 				18728ECE19E3D91D008F3BFE /* HWTest3ViewController.xib in Resources */,
@@ -944,11 +941,11 @@
 				B12794A21B5F8D6B00538C6B /* MJConst.m in Sources */,
 				B12588271B5CF3D40027D238 /* AFSecurityPolicy.m in Sources */,
 				B12794A71B5F8D6B00538C6B /* MJType.m in Sources */,
+				B1ADA4FD1B661B5B00F990FB /* HWphoto.m in Sources */,
 				B12588231B5CF3D40027D238 /* AFHTTPRequestOperation.m in Sources */,
 				189B5CEA19E3DC5300C3CEB4 /* HWItemTool.m in Sources */,
 				B1604DD81B58E8FD008DFE93 /* HWNewfeatureViewController.m in Sources */,
 				B12794821B5F6AB600538C6B /* UIImage+WebP.m in Sources */,
-				B1D5DB371B60CBFE006432D5 /* HWFootreload.m in Sources */,
 				B125883C1B5E29640027D238 /* HWTool.m in Sources */,
 				B12794A31B5F8D6B00538C6B /* MJFoundation.m in Sources */,
 				B12794A91B5F8D6B00538C6B /* NSObject+MJCoding.m in Sources */,
@@ -964,6 +961,7 @@
 				B12794AB1B5F8D6B00538C6B /* NSObject+MJMember.m in Sources */,
 				18728EC619E3D91D008F3BFE /* main.m in Sources */,
 				1839F66819E4CE8C00280C20 /* HWSearchBar.m in Sources */,
+				B181D6581B686B60003C7CDA /* HWtoobar.m in Sources */,
 				B125880E1B5CE4F80027D238 /* HWAutorViewController.m in Sources */,
 				B12588251B5CF3D40027D238 /* AFHTTPSessionManager.m in Sources */,
 				B12794841B5F6AB600538C6B /* UIImageView+WebCache.m in Sources */,

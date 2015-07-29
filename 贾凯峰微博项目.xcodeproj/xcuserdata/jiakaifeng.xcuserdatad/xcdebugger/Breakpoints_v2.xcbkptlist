@@ -266,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/Controller/HWHomeViewController.m"
-            timestampString = "459670701.194826"
+            timestampString = "459844335.919795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "303"
@@ -282,7 +282,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/Controller/HWHomeViewController.m"
-            timestampString = "459670773.144608"
+            timestampString = "459844335.919795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "357"
@@ -312,12 +312,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/Controller/HWHomeViewController.m"
-            timestampString = "459670701.194826"
+            timestampString = "459844335.919795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "317"
             endingLineNumber = "317"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/Controller/HWHomeViewController.m"
+            timestampString = "459844335.919795"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-loadmorweibo"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/Controller/HWHomeViewController.m"
+            timestampString = "459844335.919795"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-loadmorweibo"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/Controller/HWHomeViewController.m"
+            timestampString = "459844335.919795"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "-refreshchange:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/View/HWtoobar.m"
+            timestampString = "459842382.260434"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "-initWithFrame:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

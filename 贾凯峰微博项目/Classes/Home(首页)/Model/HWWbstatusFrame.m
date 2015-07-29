@@ -76,17 +76,65 @@ IB_DESIGNABLE
     self.weiboLable = (CGRect){{contentX, contentY}, weiboLable};
     
     
-    /** 配图 */
+    CGFloat originalH = 0;
+    if (status.pic_urls.count) {
+        CGFloat photowh=100;
+        CGFloat PhotoX=contentX;
+        CGFloat photoY=CGRectGetMaxY(self.weiboLable)+HWStatusCellBorderW;
+        self.photoview=CGRectMake(PhotoX, photoY, photowh, photowh);
+        originalH = CGRectGetMaxY(self.photoview) + HWStatusCellBorderW;
+
+    }
+    else{
+        originalH = CGRectGetMaxY(self.weiboLable) + HWStatusCellBorderW;
+        }    /** 配图 */
     
     /** 原创微博整体 */
     CGFloat originalX = 0;
     CGFloat originalY = 0;
     CGFloat originalW = cellW;
-    CGFloat originalH = CGRectGetMaxY(self.weiboLable) + HWStatusCellBorderW;
     self.baseonView = CGRectMake(originalX, originalY, originalW, originalH);
+    CGFloat toolbarY = 0;
+    if (status.retweeted_status) {
+
+        HWWbstatus *retweeted_status = status.retweeted_status;
+        HWUserinfo *retweeted_status_user = retweeted_status.user;
+        /** 被转发微博正文 */
+        CGFloat retweetContentX = HWStatusCellBorderW;
+        CGFloat retweetContentY = HWStatusCellBorderW;
+        NSString *retweetContent = [NSString stringWithFormat:@"@%@ : %@", retweeted_status_user.name, retweeted_status.text];
+        CGSize retweetContentSize = [self sizeWithText:retweetContent font:HWStatusCellRetweetContentFont maxW:maxW];
+        self.repostweibo = (CGRect){{retweetContentX, retweetContentY}, retweetContentSize};
+        
+        /** 被转发微博配图 */
+        CGFloat retweetH = 0;
+        if (retweeted_status.pic_urls.count) { // 转发微博有配图
+            CGFloat retweetPhotoWH = 100;
+            CGFloat retweetPhotoX = retweetContentX;
+            CGFloat retweetPhotoY = CGRectGetMaxY(self.repostweibo) + HWStatusCellBorderW;
+            self.repostphoto = CGRectMake(retweetPhotoX, retweetPhotoY, retweetPhotoWH, retweetPhotoWH);
+            
+            retweetH = CGRectGetMaxY(self.repostphoto) + HWStatusCellBorderW;
+        } else { // 转发微博没有配图
+            retweetH = CGRectGetMaxY(self.repostweibo) + HWStatusCellBorderW;
+        }
+     /** 被转发微博整体 */
+        CGFloat retweetX = 0;
+        CGFloat retweetY = CGRectGetMaxY(self.baseonView);
+        CGFloat retweetW = cellW;
+        self.repostView = CGRectMake(retweetX, retweetY, retweetW, retweetH);
+                self.cellheight = CGRectGetMaxY(self.repostView);
+        toolbarY =CGRectGetMaxY(self.repostView);
+    
+    } else
+    {
+        toolbarY=CGRectGetMaxY(self.baseonView);
+    }
     
     
-    self.cellheight = CGRectGetMaxY(self.baseonView);
+    
+    self.toolbar =CGRectMake(0, toolbarY, cellW, 35);
+    self.cellheight=CGRectGetMaxY(self.toolbar)+10;
 
 }
 

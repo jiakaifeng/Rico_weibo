@@ -18,7 +18,6 @@
 #import "HWWbstatus.h"
 #import "HWUserinfo.h"
 #import "MJExtension.h"
-#import "HWFootreload.h"
 #import "MJRefresh.h"
 #import "UIView+Extension.h"
 #import"HWStatusCell.h"
@@ -47,6 +46,7 @@
         [self setupUserInfo];
         //[self loadWeibo];
         [self setupRefresh];
+    self.tableView.backgroundColor=HWColor(211, 211, 211);
         [self.tableView addFooterWithTarget:self action:@selector(loadmorweibo)];
         NSTimer *timer=[NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(setupremindweibo) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop]addTimer:timer forMode:NSRunLoopCommonModes];
@@ -129,7 +129,6 @@
 
 -(void)setupuprefresh{
 
-    self.tableView.tableFooterView=[HWFootreload footreload];
 
 
 }
@@ -160,6 +159,7 @@
     [manger GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary * responseObject) {
         //将微博的字典转为微博模型数组
         NSArray *newStatus=[HWWbstatus objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        HWLog(@"%@",newStatus);
         NSArray *newFrames=[self statusframewithstatus:newStatus];
         NSRange range=NSMakeRange(0, newFrames.count);
         NSIndexSet *set=[NSIndexSet indexSetWithIndexesInRange:range];
