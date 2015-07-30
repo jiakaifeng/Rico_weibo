@@ -14,12 +14,13 @@
 #import "HWphoto.h"
 #import "UIImageView+WebCache.h"
 #import "HWtoobar.h"
+#import "HWphotosview.h"
 #define HWColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 @interface HWStatusCell()
 @property(nonatomic,weak)UIView *baseonView;
 @property(nonatomic,weak)UIImageView * headview;
-@property(nonatomic,weak)UIImageView * photoview;
+@property(nonatomic,weak)HWphotosview* photoviews;
 @property(nonatomic,weak)UIImageView * vipview;
 @property(nonatomic,weak)UILabel *nameLable;
 @property(nonatomic,weak)UILabel *timeLable;
@@ -27,7 +28,7 @@
 @property(nonatomic,weak)UILabel *weiboLable;
 //repost weibo
 @property(nonatomic,weak)UIView *repostView;
-@property(nonatomic,weak)UIImageView * repostphoto;
+@property(nonatomic,weak)HWphotosview * repostphotos;
 @property(nonatomic,weak)UILabel *repostweibo;
 
 @property(nonatomic,weak)HWtoobar *toolbar;
@@ -87,9 +88,9 @@
     [self.contentView addSubview:repostView];
     self.repostView=repostView;
     
-    UIImageView *repostimage=[[UIImageView alloc]init];
+    HWphotosview *repostimage=[[HWphotosview alloc]init];
     [repostView addSubview:repostimage];
-    self.repostphoto=repostimage;
+    self.repostphotos=repostimage;
     
     UILabel *repostweibo=[[UILabel alloc]init];
     repostweibo.numberOfLines=0;
@@ -111,9 +112,9 @@
     [baseonView addSubview:headview];
     self.headview=headview;
     
-    UIImageView *photoview=[[UIImageView alloc]init];
+    HWphotosview *photoview=[[HWphotosview alloc]init];
     [baseonView addSubview:photoview];
-    self.photoview=photoview;
+    self.photoviews=photoview;
     
     UIImageView *vipview=[[UIImageView alloc]init];
     [baseonView addSubview:vipview];
@@ -166,12 +167,12 @@
 
     //配图
     if (status.pic_urls.count) {
-        self.photoview.frame=statusFrame.photoview;
+        self.photoviews.frame=statusFrame.photoviews;
         HWphoto *imageurl=[status.pic_urls firstObject];
-        [self.photoview sd_setImageWithURL:[NSURL URLWithString:imageurl.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
-        self.photoview.hidden=NO;
+
+        self.photoviews.hidden=NO;
     }else{
-            self.photoview.hidden=YES;
+            self.photoviews.hidden=YES;
     }
     
     self.nameLable.frame=statusFrame.nameLable;
@@ -197,12 +198,10 @@
         self.repostweibo.frame=statusFrame.repostweibo;
         
         if (retweeted_status.pic_urls.count) {
-            self.repostphoto.frame=statusFrame.repostphoto;
-            HWphoto *imageurl=[retweeted_status.pic_urls firstObject];
-            [self.repostphoto sd_setImageWithURL:[NSURL URLWithString:imageurl.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
-            self.repostphoto.hidden=NO;
+            self.repostphotos.frame=statusFrame.repostphotos;
+            self.repostphotos.hidden=NO;
         }else{
-            self.repostphoto.hidden=YES;
+            self.repostphotos.hidden=YES;
         }
     }else{
     

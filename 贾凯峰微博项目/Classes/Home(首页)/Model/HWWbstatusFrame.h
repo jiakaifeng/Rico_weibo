@@ -22,7 +22,7 @@
 @property(nonatomic,strong)HWWbstatus *status;
 @property(nonatomic,assign)CGRect baseonView;
 @property(nonatomic,assign)CGRect  headview;
-@property(nonatomic,assign)CGRect  photoview;
+@property(nonatomic,assign)CGRect  photoviews;
 @property(nonatomic,assign)CGRect  vipview;
 @property(nonatomic,assign)CGRect nameLable;
 @property(nonatomic,assign)CGRect timeLable;
@@ -32,7 +32,7 @@
 
 
 @property(nonatomic,assign)CGRect  repostView;
-@property(nonatomic,assign)CGRect  repostphoto;
+@property(nonatomic,assign)CGRect  repostphotos;
 @property(nonatomic,assign)CGRect repostweibo;
 
 

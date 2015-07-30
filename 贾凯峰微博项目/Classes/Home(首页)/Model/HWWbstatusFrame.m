@@ -9,6 +9,7 @@ IB_DESIGNABLE
 #import "HWWbstatusFrame.h"
 #import "HWWbstatus.h"
 #import "HWUserinfo.h"
+#import "HWphotosview.h"
 #define HWStatusCellBorderW 10
 
 @implementation HWWbstatusFrame
@@ -78,11 +79,11 @@ IB_DESIGNABLE
     
     CGFloat originalH = 0;
     if (status.pic_urls.count) {
-        CGFloat photowh=100;
-        CGFloat PhotoX=contentX;
-        CGFloat photoY=CGRectGetMaxY(self.weiboLable)+HWStatusCellBorderW;
-        self.photoview=CGRectMake(PhotoX, photoY, photowh, photowh);
-        originalH = CGRectGetMaxY(self.photoview) + HWStatusCellBorderW;
+        CGFloat photosX = contentX;
+        CGFloat photosY = CGRectGetMaxY(self.weiboLable) + HWStatusCellBorderW;
+        CGSize photosSize = [HWphotosview sizeWithCount:status.pic_urls.count];
+        self.photoviews = (CGRect){{photosX, photosY}, photosSize};
+        originalH = CGRectGetMaxY(self.photoviews) + HWStatusCellBorderW;
 
     }
     else{
@@ -109,12 +110,12 @@ IB_DESIGNABLE
         /** 被转发微博配图 */
         CGFloat retweetH = 0;
         if (retweeted_status.pic_urls.count) { // 转发微博有配图
-            CGFloat retweetPhotoWH = 100;
-            CGFloat retweetPhotoX = retweetContentX;
-            CGFloat retweetPhotoY = CGRectGetMaxY(self.repostweibo) + HWStatusCellBorderW;
-            self.repostphoto = CGRectMake(retweetPhotoX, retweetPhotoY, retweetPhotoWH, retweetPhotoWH);
+            CGFloat retweetPhotosX = retweetContentX;
+            CGFloat retweetPhotosY = CGRectGetMaxY(self.repostweibo) + HWStatusCellBorderW;
+            CGSize retweetPhotosSize = [HWphotosview sizeWithCount:retweeted_status.pic_urls.count];
+            self.repostphotos = (CGRect){{retweetPhotosX, retweetPhotosY}, retweetPhotosSize};
             
-            retweetH = CGRectGetMaxY(self.repostphoto) + HWStatusCellBorderW;
+            retweetH = CGRectGetMaxY(self.repostphotos) + HWStatusCellBorderW;
         } else { // 转发微博没有配图
             retweetH = CGRectGetMaxY(self.repostweibo) + HWStatusCellBorderW;
         }

@@ -38,6 +38,8 @@
 		189B5CEA19E3DC5300C3CEB4 /* HWItemTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B5CE919E3DC5300C3CEB4 /* HWItemTool.m */; };
 		189B5CED19E3DEE900C3CEB4 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B5CEC19E3DEE900C3CEB4 /* UIBarButtonItem+Extension.m */; };
 		B10F57E81B58A6DB008C127D /* Hwtabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = B10F57E71B58A6DB008C127D /* Hwtabbar.m */; };
+		B12065B01B6A1E6D0089A2D0 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B12065AF1B6A1E6D0089A2D0 /* NSDate+Extension.m */; };
+		B12065B31B6A1F970089A2D0 /* HWphotosview.m in Sources */ = {isa = PBXBuildFile; fileRef = B12065B21B6A1F970089A2D0 /* HWphotosview.m */; };
 		B125880E1B5CE4F80027D238 /* HWAutorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B125880D1B5CE4F80027D238 /* HWAutorViewController.m */; };
 		B12588231B5CF3D40027D238 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B12588111B5CF3D40027D238 /* AFHTTPRequestOperation.m */; };
 		B12588241B5CF3D40027D238 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B12588131B5CF3D40027D238 /* AFHTTPRequestOperationManager.m */; };
@@ -160,6 +162,10 @@
 		189B5CEC19E3DEE900C3CEB4 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		B10F57E61B58A6DB008C127D /* Hwtabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hwtabbar.h; sourceTree = "<group>"; };
 		B10F57E71B58A6DB008C127D /* Hwtabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hwtabbar.m; sourceTree = "<group>"; };
+		B12065AE1B6A1E6D0089A2D0 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		B12065AF1B6A1E6D0089A2D0 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		B12065B11B6A1F970089A2D0 /* HWphotosview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWphotosview.h; sourceTree = "<group>"; };
+		B12065B21B6A1F970089A2D0 /* HWphotosview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWphotosview.m; sourceTree = "<group>"; };
 		B125880C1B5CE4F80027D238 /* HWAutorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWAutorViewController.h; sourceTree = "<group>"; };
 		B125880D1B5CE4F80027D238 /* HWAutorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWAutorViewController.m; sourceTree = "<group>"; };
 		B12588101B5CF3D40027D238 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -462,6 +468,8 @@
 				B1CA787B1B62181D0090A002 /* HWStatusCell.m */,
 				B181D6561B686B60003C7CDA /* HWtoobar.h */,
 				B181D6571B686B60003C7CDA /* HWtoobar.m */,
+				B12065B11B6A1F970089A2D0 /* HWphotosview.h */,
+				B12065B21B6A1F970089A2D0 /* HWphotosview.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -469,6 +477,8 @@
 		18728E9A19E3D91D008F3BFE /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				B12065AE1B6A1E6D0089A2D0 /* NSDate+Extension.h */,
+				B12065AF1B6A1E6D0089A2D0 /* NSDate+Extension.m */,
 				18728E9B19E3D91D008F3BFE /* Category */,
 				18728E9E19E3D91D008F3BFE /* Controller */,
 				18728EA319E3D91D008F3BFE /* Lib */,
@@ -954,11 +964,13 @@
 				B12794511B5F34DF00538C6B /* HWUserinfo.m in Sources */,
 				B12794761B5F6AB600538C6B /* MKAnnotationView+WebCache.m in Sources */,
 				18728EC019E3D91D008F3BFE /* HWDiscoverViewController.m in Sources */,
+				B12065B31B6A1F970089A2D0 /* HWphotosview.m in Sources */,
 				B12588381B5E1E0E0027D238 /* MBProgressHUD.m in Sources */,
 				B12794A61B5F8D6B00538C6B /* MJMethod.m in Sources */,
 				B12794831B5F6AB600538C6B /* UIImageView+HighlightedWebCache.m in Sources */,
 				B125882F1B5E15150027D238 /* HWAccount.m in Sources */,
 				B12794AB1B5F8D6B00538C6B /* NSObject+MJMember.m in Sources */,
+				B12065B01B6A1E6D0089A2D0 /* NSDate+Extension.m in Sources */,
 				18728EC619E3D91D008F3BFE /* main.m in Sources */,
 				1839F66819E4CE8C00280C20 /* HWSearchBar.m in Sources */,
 				B181D6581B686B60003C7CDA /* HWtoobar.m in Sources */,
