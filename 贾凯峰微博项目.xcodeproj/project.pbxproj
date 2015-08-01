@@ -98,6 +98,8 @@
 		B1D5DB501B60DB72006432D5 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D5DB461B60DB72006432D5 /* UIScrollView+MJExtension.m */; };
 		B1D5DB511B60DB72006432D5 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D5DB481B60DB72006432D5 /* UIScrollView+MJRefresh.m */; };
 		B1D5DB521B60DB72006432D5 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D5DB4A1B60DB72006432D5 /* UIView+MJExtension.m */; };
+		B1F4A4031B6B391300D63D8C /* HWphotoGifviews.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F4A4021B6B391300D63D8C /* HWphotoGifviews.m */; };
+		B1F4A4061B6B563E00D63D8C /* HWHeadview.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F4A4051B6B563E00D63D8C /* HWHeadview.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -283,6 +285,10 @@
 		B1D5DB481B60DB72006432D5 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		B1D5DB491B60DB72006432D5 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		B1D5DB4A1B60DB72006432D5 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		B1F4A4011B6B391300D63D8C /* HWphotoGifviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HWphotoGifviews.h; path = ../../../../HWphotoGifviews.h; sourceTree = "<group>"; };
+		B1F4A4021B6B391300D63D8C /* HWphotoGifviews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HWphotoGifviews.m; path = ../../../../HWphotoGifviews.m; sourceTree = "<group>"; };
+		B1F4A4041B6B563E00D63D8C /* HWHeadview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWHeadview.h; sourceTree = "<group>"; };
+		B1F4A4051B6B563E00D63D8C /* HWHeadview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWHeadview.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -470,6 +476,10 @@
 				B181D6571B686B60003C7CDA /* HWtoobar.m */,
 				B12065B11B6A1F970089A2D0 /* HWphotosview.h */,
 				B12065B21B6A1F970089A2D0 /* HWphotosview.m */,
+				B1F4A4011B6B391300D63D8C /* HWphotoGifviews.h */,
+				B1F4A4021B6B391300D63D8C /* HWphotoGifviews.m */,
+				B1F4A4041B6B563E00D63D8C /* HWHeadview.h */,
+				B1F4A4051B6B563E00D63D8C /* HWHeadview.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -934,6 +944,7 @@
 				B12588361B5E1E0E0027D238 /* MBProgressHUD+MJ.m in Sources */,
 				B12794881B5F6ED000538C6B /* HWWbstatus.m in Sources */,
 				B12588281B5CF3D40027D238 /* AFURLConnectionOperation.m in Sources */,
+				B1F4A4031B6B391300D63D8C /* HWphotoGifviews.m in Sources */,
 				B12794791B5F6AB600538C6B /* SDWebImageCompat.m in Sources */,
 				18728EC219E3D91D008F3BFE /* UIView+Extension.m in Sources */,
 				18728EC919E3D91D008F3BFE /* HWTest1ViewController.m in Sources */,
@@ -968,6 +979,7 @@
 				B12588381B5E1E0E0027D238 /* MBProgressHUD.m in Sources */,
 				B12794A61B5F8D6B00538C6B /* MJMethod.m in Sources */,
 				B12794831B5F6AB600538C6B /* UIImageView+HighlightedWebCache.m in Sources */,
+				B1F4A4061B6B563E00D63D8C /* HWHeadview.m in Sources */,
 				B125882F1B5E15150027D238 /* HWAccount.m in Sources */,
 				B12794AB1B5F8D6B00538C6B /* NSObject+MJMember.m in Sources */,
 				B12065B01B6A1E6D0089A2D0 /* NSDate+Extension.m in Sources */,

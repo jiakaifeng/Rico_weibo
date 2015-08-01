@@ -13,14 +13,6 @@
 -(void)setMbtype:(int)mbtype{
     _mbtype=mbtype;
     self.vip=mbtype>2;
-
-
 }
-+(instancetype)userwithdDict:(NSDictionary *)dict{
-    HWUserinfo *user=[[self alloc]init];
-    user.idstr=dict[@"idstr"];
-    user.profile_image_url=dict[@"profile_image_url"];
-    user.name=dict[@"name"];
-    return user;
-}
+
 @end

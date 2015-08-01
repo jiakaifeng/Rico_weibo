@@ -42,6 +42,7 @@
 - (void)viewDidLoad{
     
         [super viewDidLoad];
+
         [self setupnav];
         [self setupUserInfo];
         //[self loadWeibo];

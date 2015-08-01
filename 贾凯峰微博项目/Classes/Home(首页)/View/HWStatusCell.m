@@ -15,11 +15,12 @@
 #import "UIImageView+WebCache.h"
 #import "HWtoobar.h"
 #import "HWphotosview.h"
+#import "HWHeadview.h"
 #define HWColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 @interface HWStatusCell()
 @property(nonatomic,weak)UIView *baseonView;
-@property(nonatomic,weak)UIImageView * headview;
+@property(nonatomic,weak)HWHeadview * headview;
 @property(nonatomic,weak)HWphotosview* photoviews;
 @property(nonatomic,weak)UIImageView * vipview;
 @property(nonatomic,weak)UILabel *nameLable;
@@ -74,11 +75,6 @@
     [self.contentView addSubview:toolbar];
     self.toolbar=toolbar;
 
-
-
-
-
-
 }
 //转发微博创建
 -(void)setuprepostweibo{
@@ -108,7 +104,7 @@
     [self.contentView addSubview:baseonView];
     self.baseonView=baseonView;
     
-    UIImageView *headview=[[UIImageView alloc]init];
+    HWHeadview *headview=[[HWHeadview alloc]init];
     [baseonView addSubview:headview];
     self.headview=headview;
     
@@ -160,7 +156,7 @@
     self.baseonView.frame=statusFrame.baseonView;
     //头像
     self.headview.frame=statusFrame.headview;
-    [self.headview sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_defaul_small"]];
+    self.headview.user=user;
     //vip
     self.vipview.frame=statusFrame.vipview;
     self.vipview.image=[UIImage imageNamed:@"common_icon_membership_level1"];
@@ -168,7 +164,7 @@
     //配图
     if (status.pic_urls.count) {
         self.photoviews.frame=statusFrame.photoviews;
-        HWphoto *imageurl=[status.pic_urls firstObject];
+        self.photoviews.photos = status.pic_urls;
 
         self.photoviews.hidden=NO;
     }else{
@@ -199,6 +195,7 @@
         
         if (retweeted_status.pic_urls.count) {
             self.repostphotos.frame=statusFrame.repostphotos;
+            self.repostphotos.photos = status.retweeted_status.pic_urls;
             self.repostphotos.hidden=NO;
         }else{
             self.repostphotos.hidden=YES;

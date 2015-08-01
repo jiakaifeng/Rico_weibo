@@ -22,7 +22,7 @@
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     // 如果是真机调试，转换这种欧美时间，需要设置locale
     fmt.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
-    
+
     fmt.dateFormat = @"EEE MMM dd HH:mm:ss Z yyyy";
     //    _created_at = @"Tue Sep 30 17:06:25 +0600 2014";
     
