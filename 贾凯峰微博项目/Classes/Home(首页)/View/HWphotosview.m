@@ -36,7 +36,6 @@
     return CGSizeMake(photosW, photosH);
 }
 -(void)setPhotos:(NSArray *)photos{
-    NSLog(@"shuchuu");
     _photos=photos;
     int photocount=photos.count;
     

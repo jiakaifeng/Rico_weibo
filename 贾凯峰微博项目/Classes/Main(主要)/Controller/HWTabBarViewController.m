@@ -13,6 +13,7 @@
 #import "HWProfileViewController.h"
 #import "HWNavigationController.h"
 #import "Hwtabbar.h"
+#import "HWComposeViewController.h"
 
 @interface HWTabBarViewController ()<HWTabBarDelegate>
 
@@ -76,6 +77,16 @@
     HWNavigationController *nav = [[HWNavigationController alloc] initWithRootViewController:childVc];
     // 添加为子控制器
     [self addChildViewController:nav];
+}
+-(void)tabBarDidClickPlusButton:(Hwtabbar *)tabBar{
+    
+    
+    HWComposeViewController *vc=[[HWComposeViewController alloc]init];
+    HWNavigationController *nac=[[HWNavigationController alloc]initWithRootViewController:vc];
+    [self presentViewController:nac animated:YES completion:nil];
+
+
+
 }
 
 @end

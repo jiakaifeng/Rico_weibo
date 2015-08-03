@@ -315,38 +315,6 @@
             timestampString = "460017580.026905"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "-loadmorweibo"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/Controller/HWHomeViewController.m"
-            timestampString = "460017580.026905"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "-loadmorweibo"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/Controller/HWHomeViewController.m"
-            timestampString = "460017580.026905"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "164"
             endingLineNumber = "164"
             landmarkName = "-refreshchange:"
@@ -366,6 +334,38 @@
             startingLineNumber = "24"
             endingLineNumber = "24"
             landmarkName = "-initWithFrame:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/HWComposeViewController.m"
+            timestampString = "460283128.673089"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "-setupNav"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/View/HWphotosview.m"
+            timestampString = "460284292.151782"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-setPhotos:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

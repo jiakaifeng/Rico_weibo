@@ -85,6 +85,7 @@
 		B12794A91B5F8D6B00538C6B /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B127949C1B5F8D6B00538C6B /* NSObject+MJCoding.m */; };
 		B12794AA1B5F8D6B00538C6B /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B127949E1B5F8D6B00538C6B /* NSObject+MJKeyValue.m */; };
 		B12794AB1B5F8D6B00538C6B /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = B12794A01B5F8D6B00538C6B /* NSObject+MJMember.m */; };
+		B14205BF1B6F3EA60068DE0F /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B14205BE1B6F3EA60068DE0F /* PlaceholderTextView.m */; };
 		B1604DD81B58E8FD008DFE93 /* HWNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1604DD71B58E8FD008DFE93 /* HWNewfeatureViewController.m */; };
 		B181D6581B686B60003C7CDA /* HWtoobar.m in Sources */ = {isa = PBXBuildFile; fileRef = B181D6571B686B60003C7CDA /* HWtoobar.m */; };
 		B1ADA4FA1B65C96B00F990FB /* HWWbstatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ADA4F91B65C96B00F990FB /* HWWbstatusFrame.m */; };
@@ -100,6 +101,7 @@
 		B1D5DB521B60DB72006432D5 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D5DB4A1B60DB72006432D5 /* UIView+MJExtension.m */; };
 		B1F4A4031B6B391300D63D8C /* HWphotoGifviews.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F4A4021B6B391300D63D8C /* HWphotoGifviews.m */; };
 		B1F4A4061B6B563E00D63D8C /* HWHeadview.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F4A4051B6B563E00D63D8C /* HWHeadview.m */; };
+		B1FC75231B6F58D400083182 /* HWComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FC75221B6F58D400083182 /* HWComposeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,6 +261,8 @@
 		B127949E1B5F8D6B00538C6B /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
 		B127949F1B5F8D6B00538C6B /* NSObject+MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJMember.h"; sourceTree = "<group>"; };
 		B12794A01B5F8D6B00538C6B /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
+		B14205BD1B6F3EA60068DE0F /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
+		B14205BE1B6F3EA60068DE0F /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
 		B1604DD61B58E8FD008DFE93 /* HWNewfeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWNewfeatureViewController.h; sourceTree = "<group>"; };
 		B1604DD71B58E8FD008DFE93 /* HWNewfeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWNewfeatureViewController.m; sourceTree = "<group>"; };
 		B181D6561B686B60003C7CDA /* HWtoobar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWtoobar.h; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 		B1F4A4021B6B391300D63D8C /* HWphotoGifviews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HWphotoGifviews.m; path = ../../../../HWphotoGifviews.m; sourceTree = "<group>"; };
 		B1F4A4041B6B563E00D63D8C /* HWHeadview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWHeadview.h; sourceTree = "<group>"; };
 		B1F4A4051B6B563E00D63D8C /* HWHeadview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWHeadview.m; sourceTree = "<group>"; };
+		B1FC75211B6F58D400083182 /* HWComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWComposeViewController.h; sourceTree = "<group>"; };
+		B1FC75221B6F58D400083182 /* HWComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWComposeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,6 +392,7 @@
 		18728E5F19E38051008F3BFE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B14205AD1B6F08020068DE0F /* writewb（写微博） */,
 				B125880A1B5CE2DB0027D238 /* 登入界面 */,
 				B1604DD41B58E8B1008DFE93 /* Newfeature */,
 				18728E8E19E3D91D008F3BFE /* Discover(发现) */,
@@ -795,6 +802,17 @@
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
+		B14205AD1B6F08020068DE0F /* writewb（写微博） */ = {
+			isa = PBXGroup;
+			children = (
+				B1FC75211B6F58D400083182 /* HWComposeViewController.h */,
+				B1FC75221B6F58D400083182 /* HWComposeViewController.m */,
+				B14205BD1B6F3EA60068DE0F /* PlaceholderTextView.h */,
+				B14205BE1B6F3EA60068DE0F /* PlaceholderTextView.m */,
+			);
+			name = "writewb（写微博）";
+			sourceTree = "<group>";
+		};
 		B1604DD41B58E8B1008DFE93 /* Newfeature */ = {
 			isa = PBXGroup;
 			children = (
@@ -968,6 +986,7 @@
 				B1604DD81B58E8FD008DFE93 /* HWNewfeatureViewController.m in Sources */,
 				B12794821B5F6AB600538C6B /* UIImage+WebP.m in Sources */,
 				B125883C1B5E29640027D238 /* HWTool.m in Sources */,
+				B1FC75231B6F58D400083182 /* HWComposeViewController.m in Sources */,
 				B12794A31B5F8D6B00538C6B /* MJFoundation.m in Sources */,
 				B12794A91B5F8D6B00538C6B /* NSObject+MJCoding.m in Sources */,
 				B127947C1B5F6AB600538C6B /* SDWebImageDownloaderOperation.m in Sources */,
@@ -990,6 +1009,7 @@
 				B12588251B5CF3D40027D238 /* AFHTTPSessionManager.m in Sources */,
 				B12794841B5F6AB600538C6B /* UIImageView+WebCache.m in Sources */,
 				189B5CED19E3DEE900C3CEB4 /* UIBarButtonItem+Extension.m in Sources */,
+				B14205BF1B6F3EA60068DE0F /* PlaceholderTextView.m in Sources */,
 				B12794851B5F6AB600538C6B /* UIView+WebCacheOperation.m in Sources */,
 				B1ADA4FA1B65C96B00F990FB /* HWWbstatusFrame.m in Sources */,
 				1839F66E19E4E67900280C20 /* HWTitleMenuViewController.m in Sources */,

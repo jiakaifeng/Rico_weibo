@@ -29,12 +29,9 @@
 @property(nonatomic,assign)CGRect sourseLable;
 @property(nonatomic,assign)CGRect weiboLable;
 @property(nonatomic,assign)CGFloat cellheight;
-
-
 @property(nonatomic,assign)CGRect  repostView;
 @property(nonatomic,assign)CGRect  repostphotos;
 @property(nonatomic,assign)CGRect repostweibo;
-
 
 @property(nonatomic,assign)CGRect toolbar;
 
