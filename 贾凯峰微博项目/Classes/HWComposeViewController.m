@@ -5,8 +5,10 @@
 #import "PlaceholderTextView.h"
 #import "MBProgressHUD+MJ.h"
 #import "AFNetworking.h"
+#import "HWHomeViewController.h"
+#import"HWwriteweibotoolbar.h"
 
-@interface HWComposeViewController ()
+@interface HWComposeViewController ()<UITextViewDelegate>
 /** 输入控件 */
 @property (nonatomic, weak) PlaceholderTextView *textView;
 @end
@@ -16,7 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]   initWithTarget:self action:@selector(dismissKeyboards)];
+    [self.view addGestureRecognizer:tap];
     self.view.backgroundColor = [UIColor whiteColor];
     
     // 设置导航栏内容
@@ -24,9 +27,24 @@
     
     // 添加输入控件
     [self setupTextView];
+    [self setupwbtoolbar];
+
+}
+-(void)dismissKeyboards {
+    [self resignFirstResponder];
+}
+-(void)setupwbtoolbar{
+    HWwriteweibotoolbar *toolbar=[[HWwriteweibotoolbar alloc]init];
+    toolbar.width=self.view.width;
+    toolbar.height=40;
+    self.textView.inputAccessoryView=toolbar;
     
-    // 默认是YES：当scrollView遇到UINavigationBar、UITabBar等控件时，默认会设置scrollView的contentInset
-//    self.automaticallyAdjustsScrollViewInsets;
+
+}
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+
+    [self.textView endEditing:YES];
+
 }
 
 - (void)dealloc
@@ -54,9 +72,9 @@
 - (void)setupTextView
 {
     PlaceholderTextView *textView = [[PlaceholderTextView alloc] init];
-
-  textView.PlaceholderLabel.text=@"分享新微博......";
-    textView.PlaceholderLabel.frame = (CGRect){0,0,300,30};
+     textView.alwaysBounceVertical=YES;
+    textView.PlaceholderLabel.text=@"分享新微博......";
+    textView.PlaceholderLabel.frame = (CGRect){5,0,300,30};
     textView.frame=self.view.bounds;
     [self.view addSubview:textView];
     self.textView=textView;
@@ -69,6 +87,7 @@
 
 #pragma mark - 监听方法
 - (void)cancel {
+
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -81,7 +100,6 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"access_token"] = [HWTool account].access_token;
     params[@"status"] = self.textView.text;
-    
     // 3.发送请求
     [mgr POST:@"https://api.weibo.com/2/statuses/update.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
         [MBProgressHUD showSuccess:@"发送成功"];

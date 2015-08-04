@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/Controller/HWHomeViewController.m"
-            timestampString = "460017580.026905"
+            timestampString = "460286644.879604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "304"
-            endingLineNumber = "304"
+            startingLineNumber = "308"
+            endingLineNumber = "308"
             landmarkName = "-dropdownmenudismiss:"
             landmarkType = "5">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/Controller/HWHomeViewController.m"
-            timestampString = "460017580.026905"
+            timestampString = "460286644.879604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "358"
-            endingLineNumber = "358">
+            startingLineNumber = "362"
+            endingLineNumber = "362">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -296,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/Controller/HWHomeViewController.m"
-            timestampString = "460017580.026905"
+            timestampString = "460286644.879604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "318"
-            endingLineNumber = "318"
+            startingLineNumber = "322"
+            endingLineNumber = "322"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -312,11 +312,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Home(&#x9996;&#x9875;)/Controller/HWHomeViewController.m"
-            timestampString = "460017580.026905"
+            timestampString = "460286644.879604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "-refreshchange:"
             landmarkType = "5">
          </BreakpointContent>
@@ -344,11 +344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/HWComposeViewController.m"
-            timestampString = "460283128.673089"
+            timestampString = "460372584.367967"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "-setupNav"
             landmarkType = "5">
          </BreakpointContent>
@@ -366,6 +366,38 @@
             startingLineNumber = "41"
             endingLineNumber = "41"
             landmarkName = "-setPhotos:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Main(&#x4e3b;&#x8981;)/View/Hwtabbar.h"
+            timestampString = "460350276.142482"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "-tabBarDidClickPlusButton:"
+            landmarkType = "4">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8d3e;&#x51ef;&#x5cf0;&#x5fae;&#x535a;&#x9879;&#x76ee;/Classes/Main(&#x4e3b;&#x8981;)/Controller/HWmeauViewController.m"
+            timestampString = "460365681.305988"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "-cacelchage"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

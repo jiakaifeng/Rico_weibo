@@ -25,6 +25,7 @@
 @interface HWHomeViewController ()<HWDropdownMenudelegate>
 @property(nonatomic,strong)NSMutableArray *statesFrame;
 @property(nonatomic,assign)NSInteger currentPage;
+@property(nonatomic,weak)MBProgressHUD *show;
 @end
 
 @implementation HWHomeViewController
@@ -45,6 +46,10 @@
 
         [self setupnav];
         [self setupUserInfo];
+
+      MBProgressHUD *show=[MBProgressHUD showMessage:@"正在刷新数据中"];
+    self.show=show;
+  
         //[self loadWeibo];
         [self setupRefresh];
     self.tableView.backgroundColor=HWColor(211, 211, 211);
@@ -112,9 +117,6 @@
         HWLog(@"请求失败--%@",error);
         
     }];
-    
-
-
 
 }
 
@@ -166,18 +168,20 @@
         NSIndexSet *set=[NSIndexSet indexSetWithIndexesInRange:range];
         [self.statesFrame insertObjects:newFrames atIndexes:set];
         //tableview 更新数据
+    
         [self.tableView reloadData];
+        [_show hide:YES];
         [Refresh endRefreshing];
         [self showWeiboCount:newStatus.count];
         
         self.tabBarItem.badgeValue=nil;
         [UIApplication sharedApplication].applicationIconBadgeNumber=0;
     
+    
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         HWLog(@"请求失败--%@",error);
         
     }];
-    
 
     [Refresh endRefreshing];
 

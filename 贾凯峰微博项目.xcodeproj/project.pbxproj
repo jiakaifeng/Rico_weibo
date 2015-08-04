@@ -90,6 +90,10 @@
 		B181D6581B686B60003C7CDA /* HWtoobar.m in Sources */ = {isa = PBXBuildFile; fileRef = B181D6571B686B60003C7CDA /* HWtoobar.m */; };
 		B1ADA4FA1B65C96B00F990FB /* HWWbstatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ADA4F91B65C96B00F990FB /* HWWbstatusFrame.m */; };
 		B1ADA4FD1B661B5B00F990FB /* HWphoto.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ADA4FC1B661B5B00F990FB /* HWphoto.m */; };
+		B1B6D2CD1B70583700D991F3 /* TPCSpringMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D2C81B70583700D991F3 /* TPCSpringMenu.m */; };
+		B1B6D2CE1B70583700D991F3 /* TPCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D2CA1B70583700D991F3 /* TPCItem.m */; };
+		B1B6D2CF1B70583700D991F3 /* TPCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D2CC1B70583700D991F3 /* TPCButton.m */; };
+		B1B6D2E11B70ACD900D991F3 /* HWwriteweibotoolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D2E01B70ACD900D991F3 /* HWwriteweibotoolbar.m */; };
 		B1CA787D1B62181D0090A002 /* HWStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CA787B1B62181D0090A002 /* HWStatusCell.m */; };
 		B1D5DB4B1B60DB72006432D5 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B1D5DB3B1B60DB72006432D5 /* MJRefresh.bundle */; };
 		B1D5DB4C1B60DB72006432D5 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D5DB3E1B60DB72006432D5 /* MJRefreshBaseView.m */; };
@@ -271,6 +275,14 @@
 		B1ADA4F91B65C96B00F990FB /* HWWbstatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWbstatusFrame.m; sourceTree = "<group>"; };
 		B1ADA4FB1B661B5B00F990FB /* HWphoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWphoto.h; sourceTree = "<group>"; };
 		B1ADA4FC1B661B5B00F990FB /* HWphoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWphoto.m; sourceTree = "<group>"; };
+		B1B6D2C71B70583700D991F3 /* TPCSpringMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPCSpringMenu.h; path = "../../../../../../../TPCSpringMenu-master/TPCSpringMenu/TPCSpringMenu/TPCSpringMenu.h"; sourceTree = "<group>"; };
+		B1B6D2C81B70583700D991F3 /* TPCSpringMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPCSpringMenu.m; path = "../../../../../../../TPCSpringMenu-master/TPCSpringMenu/TPCSpringMenu/TPCSpringMenu.m"; sourceTree = "<group>"; };
+		B1B6D2C91B70583700D991F3 /* TPCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPCItem.h; path = "../../../../../../../TPCSpringMenu-master/TPCSpringMenu/TPCSpringMenu/TPCItem.h"; sourceTree = "<group>"; };
+		B1B6D2CA1B70583700D991F3 /* TPCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPCItem.m; path = "../../../../../../../TPCSpringMenu-master/TPCSpringMenu/TPCSpringMenu/TPCItem.m"; sourceTree = "<group>"; };
+		B1B6D2CB1B70583700D991F3 /* TPCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPCButton.h; path = "../../../../../../../TPCSpringMenu-master/TPCSpringMenu/TPCSpringMenu/TPCButton.h"; sourceTree = "<group>"; };
+		B1B6D2CC1B70583700D991F3 /* TPCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPCButton.m; path = "../../../../../../../TPCSpringMenu-master/TPCSpringMenu/TPCSpringMenu/TPCButton.m"; sourceTree = "<group>"; };
+		B1B6D2DF1B70ACD900D991F3 /* HWwriteweibotoolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWwriteweibotoolbar.h; sourceTree = "<group>"; };
+		B1B6D2E01B70ACD900D991F3 /* HWwriteweibotoolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWwriteweibotoolbar.m; sourceTree = "<group>"; };
 		B1CA787A1B62181D0090A002 /* HWStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWStatusCell.h; sourceTree = "<group>"; };
 		B1CA787B1B62181D0090A002 /* HWStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWStatusCell.m; sourceTree = "<group>"; };
 		B1D5DB3B1B60DB72006432D5 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
@@ -532,6 +544,12 @@
 		18728EA319E3D91D008F3BFE /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				B1B6D2C71B70583700D991F3 /* TPCSpringMenu.h */,
+				B1B6D2C81B70583700D991F3 /* TPCSpringMenu.m */,
+				B1B6D2C91B70583700D991F3 /* TPCItem.h */,
+				B1B6D2CA1B70583700D991F3 /* TPCItem.m */,
+				B1B6D2CB1B70583700D991F3 /* TPCButton.h */,
+				B1B6D2CC1B70583700D991F3 /* TPCButton.m */,
 				B1D5DB3A1B60DB72006432D5 /* MJRefresh */,
 				B12794891B5F8D6B00538C6B /* MJExtension */,
 				B12794541B5F6AB600538C6B /* SDWebImage */,
@@ -805,10 +823,9 @@
 		B14205AD1B6F08020068DE0F /* writewb（写微博） */ = {
 			isa = PBXGroup;
 			children = (
-				B1FC75211B6F58D400083182 /* HWComposeViewController.h */,
-				B1FC75221B6F58D400083182 /* HWComposeViewController.m */,
-				B14205BD1B6F3EA60068DE0F /* PlaceholderTextView.h */,
-				B14205BE1B6F3EA60068DE0F /* PlaceholderTextView.m */,
+				B1B6D2DE1B70AC7900D991F3 /* control */,
+				B1B6D2DD1B70AC7600D991F3 /* modol */,
+				B1B6D2DC1B70AC7300D991F3 /* view */,
 			);
 			name = "writewb（写微博）";
 			sourceTree = "<group>";
@@ -828,6 +845,33 @@
 				B1604DD71B58E8FD008DFE93 /* HWNewfeatureViewController.m */,
 			);
 			name = Control;
+			sourceTree = "<group>";
+		};
+		B1B6D2DC1B70AC7300D991F3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B1B6D2DF1B70ACD900D991F3 /* HWwriteweibotoolbar.h */,
+				B1B6D2E01B70ACD900D991F3 /* HWwriteweibotoolbar.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		B1B6D2DD1B70AC7600D991F3 /* modol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = modol;
+			sourceTree = "<group>";
+		};
+		B1B6D2DE1B70AC7900D991F3 /* control */ = {
+			isa = PBXGroup;
+			children = (
+				B1FC75211B6F58D400083182 /* HWComposeViewController.h */,
+				B1FC75221B6F58D400083182 /* HWComposeViewController.m */,
+				B14205BD1B6F3EA60068DE0F /* PlaceholderTextView.h */,
+				B14205BE1B6F3EA60068DE0F /* PlaceholderTextView.m */,
+			);
+			name = control;
 			sourceTree = "<group>";
 		};
 		B1D5DB3A1B60DB72006432D5 /* MJRefresh */ = {
@@ -1027,6 +1071,7 @@
 				18728EC819E3D91D008F3BFE /* HWProfileViewController.m in Sources */,
 				B12794781B5F6AB600538C6B /* SDImageCache.m in Sources */,
 				B12794771B5F6AB600538C6B /* NSData+ImageContentType.m in Sources */,
+				B1B6D2CF1B70583700D991F3 /* TPCButton.m in Sources */,
 				B1D5DB4C1B60DB72006432D5 /* MJRefreshBaseView.m in Sources */,
 				B1D5DB4E1B60DB72006432D5 /* MJRefreshFooterView.m in Sources */,
 				B12588261B5CF3D40027D238 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1034,6 +1079,9 @@
 				B127947E1B5F6AB600538C6B /* SDWebImagePrefetcher.m in Sources */,
 				B1CA787D1B62181D0090A002 /* HWStatusCell.m in Sources */,
 				B12794811B5F6AB600538C6B /* UIImage+MultiFormat.m in Sources */,
+				B1B6D2E11B70ACD900D991F3 /* HWwriteweibotoolbar.m in Sources */,
+				B1B6D2CE1B70583700D991F3 /* TPCItem.m in Sources */,
+				B1B6D2CD1B70583700D991F3 /* TPCSpringMenu.m in Sources */,
 				B125882A1B5CF3D40027D238 /* AFURLResponseSerialization.m in Sources */,
 				18728EC519E3D91D008F3BFE /* HWAppDelegate.m in Sources */,
 			);
