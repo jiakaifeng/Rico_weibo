@@ -43,7 +43,7 @@
 }
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
 
-    [self.textView endEditing:YES];
+    [self.view endEditing:YES];
 
 }
 
