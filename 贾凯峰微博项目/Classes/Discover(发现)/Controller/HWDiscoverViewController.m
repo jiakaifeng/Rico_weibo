@@ -11,6 +11,7 @@
 #import "HWSearchBar.h"
 
 @interface HWDiscoverViewController ()
+@property(nonatomic,strong)HWSearchBar *searchBar;
 
 @end
 
@@ -35,7 +36,11 @@
     searchBar.height = 30;
     self.navigationItem.titleView = searchBar;
 }
-
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (![self.view isExclusiveTouch]) {
+        [self resignFirstResponder];
+    }
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

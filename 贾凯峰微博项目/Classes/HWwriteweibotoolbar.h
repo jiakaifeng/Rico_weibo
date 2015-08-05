@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HWwriteweibotoolbar : UIView
+typedef enum {
+    buttontypecamer,
+    buttontypephoto,
+    buttontypeemotion,
+    buttontypekeyboard,
+    buttontypeperson,
+}buttontype;
+@class HWwriteweibotoolbar;
+@protocol buttondelegate <NSObject>
 
+@optional
+-(void)toolbar:(HWwriteweibotoolbar *)toolbar clikbutton:(buttontype)buttontype;
+
+@end
+@interface HWwriteweibotoolbar : UIView
+@property(nonatomic,weak)id<buttondelegate>delegate;
 @end

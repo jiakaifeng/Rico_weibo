@@ -28,7 +28,10 @@
     }
     return self;
 }
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [self endEditing:YES];
 
+}
 
 - (void)awakeFromNib {
    

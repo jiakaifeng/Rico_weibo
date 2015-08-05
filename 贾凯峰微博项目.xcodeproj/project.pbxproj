@@ -88,6 +88,8 @@
 		B14205BF1B6F3EA60068DE0F /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B14205BE1B6F3EA60068DE0F /* PlaceholderTextView.m */; };
 		B1604DD81B58E8FD008DFE93 /* HWNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1604DD71B58E8FD008DFE93 /* HWNewfeatureViewController.m */; };
 		B181D6581B686B60003C7CDA /* HWtoobar.m in Sources */ = {isa = PBXBuildFile; fileRef = B181D6571B686B60003C7CDA /* HWtoobar.m */; };
+		B18F9E731B71B8CD00B94193 /* UIView+KeyboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = B18F9E721B71B8CD00B94193 /* UIView+KeyboardObserver.m */; };
+		B18F9E761B71E68300B94193 /* HWphotoalumb.m in Sources */ = {isa = PBXBuildFile; fileRef = B18F9E751B71E68300B94193 /* HWphotoalumb.m */; };
 		B1ADA4FA1B65C96B00F990FB /* HWWbstatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ADA4F91B65C96B00F990FB /* HWWbstatusFrame.m */; };
 		B1ADA4FD1B661B5B00F990FB /* HWphoto.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ADA4FC1B661B5B00F990FB /* HWphoto.m */; };
 		B1B6D2CD1B70583700D991F3 /* TPCSpringMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D2C81B70583700D991F3 /* TPCSpringMenu.m */; };
@@ -271,6 +273,10 @@
 		B1604DD71B58E8FD008DFE93 /* HWNewfeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWNewfeatureViewController.m; sourceTree = "<group>"; };
 		B181D6561B686B60003C7CDA /* HWtoobar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWtoobar.h; sourceTree = "<group>"; };
 		B181D6571B686B60003C7CDA /* HWtoobar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWtoobar.m; sourceTree = "<group>"; };
+		B18F9E711B71B8CD00B94193 /* UIView+KeyboardObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KeyboardObserver.h"; sourceTree = "<group>"; };
+		B18F9E721B71B8CD00B94193 /* UIView+KeyboardObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KeyboardObserver.m"; sourceTree = "<group>"; };
+		B18F9E741B71E68300B94193 /* HWphotoalumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HWphotoalumb.h; path = "../../../../../DDKeyboardObserver-master/DDKeyboardObserver/KeyboardObserver/HWphotoalumb.h"; sourceTree = "<group>"; };
+		B18F9E751B71E68300B94193 /* HWphotoalumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HWphotoalumb.m; path = "../../../../../DDKeyboardObserver-master/DDKeyboardObserver/KeyboardObserver/HWphotoalumb.m"; sourceTree = "<group>"; };
 		B1ADA4F81B65C96B00F990FB /* HWWbstatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWbstatusFrame.h; sourceTree = "<group>"; };
 		B1ADA4F91B65C96B00F990FB /* HWWbstatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWbstatusFrame.m; sourceTree = "<group>"; };
 		B1ADA4FB1B661B5B00F990FB /* HWphoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWphoto.h; sourceTree = "<group>"; };
@@ -823,6 +829,7 @@
 		B14205AD1B6F08020068DE0F /* writewb（写微博） */ = {
 			isa = PBXGroup;
 			children = (
+				B18F9E701B71B8CD00B94193 /* KeyboardObserver */,
 				B1B6D2DE1B70AC7900D991F3 /* control */,
 				B1B6D2DD1B70AC7600D991F3 /* modol */,
 				B1B6D2DC1B70AC7300D991F3 /* view */,
@@ -847,6 +854,16 @@
 			name = Control;
 			sourceTree = "<group>";
 		};
+		B18F9E701B71B8CD00B94193 /* KeyboardObserver */ = {
+			isa = PBXGroup;
+			children = (
+				B18F9E711B71B8CD00B94193 /* UIView+KeyboardObserver.h */,
+				B18F9E721B71B8CD00B94193 /* UIView+KeyboardObserver.m */,
+			);
+			name = KeyboardObserver;
+			path = "../../../../../DDKeyboardObserver-master/DDKeyboardObserver/KeyboardObserver";
+			sourceTree = "<group>";
+		};
 		B1B6D2DC1B70AC7300D991F3 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -866,6 +883,8 @@
 		B1B6D2DE1B70AC7900D991F3 /* control */ = {
 			isa = PBXGroup;
 			children = (
+				B18F9E741B71E68300B94193 /* HWphotoalumb.h */,
+				B18F9E751B71E68300B94193 /* HWphotoalumb.m */,
 				B1FC75211B6F58D400083182 /* HWComposeViewController.h */,
 				B1FC75221B6F58D400083182 /* HWComposeViewController.m */,
 				B14205BD1B6F3EA60068DE0F /* PlaceholderTextView.h */,
@@ -1034,6 +1053,7 @@
 				B12794A31B5F8D6B00538C6B /* MJFoundation.m in Sources */,
 				B12794A91B5F8D6B00538C6B /* NSObject+MJCoding.m in Sources */,
 				B127947C1B5F6AB600538C6B /* SDWebImageDownloaderOperation.m in Sources */,
+				B18F9E731B71B8CD00B94193 /* UIView+KeyboardObserver.m in Sources */,
 				B1D5DB501B60DB72006432D5 /* UIScrollView+MJExtension.m in Sources */,
 				B12794511B5F34DF00538C6B /* HWUserinfo.m in Sources */,
 				B12794761B5F6AB600538C6B /* MKAnnotationView+WebCache.m in Sources */,
@@ -1064,6 +1084,7 @@
 				18728ECB19E3D91D008F3BFE /* HWTest2ViewController.m in Sources */,
 				1839F66B19E4E09A00280C20 /* HWDropdownMenu.m in Sources */,
 				B127947B1B5F6AB600538C6B /* SDWebImageDownloader.m in Sources */,
+				B18F9E761B71E68300B94193 /* HWphotoalumb.m in Sources */,
 				B12794A41B5F8D6B00538C6B /* MJIvar.m in Sources */,
 				18728EC719E3D91D008F3BFE /* HWMessageCenterViewController.m in Sources */,
 				B12794A11B5F8D6B00538C6B /* MJArgument.m in Sources */,
