@@ -88,10 +88,12 @@
 		B14205BF1B6F3EA60068DE0F /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B14205BE1B6F3EA60068DE0F /* PlaceholderTextView.m */; };
 		B1604DD81B58E8FD008DFE93 /* HWNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1604DD71B58E8FD008DFE93 /* HWNewfeatureViewController.m */; };
 		B181D6581B686B60003C7CDA /* HWtoobar.m in Sources */ = {isa = PBXBuildFile; fileRef = B181D6571B686B60003C7CDA /* HWtoobar.m */; };
-		B18F9E731B71B8CD00B94193 /* UIView+KeyboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = B18F9E721B71B8CD00B94193 /* UIView+KeyboardObserver.m */; };
 		B18F9E761B71E68300B94193 /* HWphotoalumb.m in Sources */ = {isa = PBXBuildFile; fileRef = B18F9E751B71E68300B94193 /* HWphotoalumb.m */; };
 		B1ADA4FA1B65C96B00F990FB /* HWWbstatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ADA4F91B65C96B00F990FB /* HWWbstatusFrame.m */; };
 		B1ADA4FD1B661B5B00F990FB /* HWphoto.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ADA4FC1B661B5B00F990FB /* HWphoto.m */; };
+		B1B5950A1B732E1F00F301A5 /* HWemotionkeyboardview.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B595091B732E1F00F301A5 /* HWemotionkeyboardview.m */; };
+		B1B5950D1B732E3400F301A5 /* HWemotiontoolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B5950C1B732E3400F301A5 /* HWemotiontoolbar.m */; };
+		B1B595101B732E6500F301A5 /* HWemotionscrollview.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B5950F1B732E6500F301A5 /* HWemotionscrollview.m */; };
 		B1B6D2CD1B70583700D991F3 /* TPCSpringMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D2C81B70583700D991F3 /* TPCSpringMenu.m */; };
 		B1B6D2CE1B70583700D991F3 /* TPCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D2CA1B70583700D991F3 /* TPCItem.m */; };
 		B1B6D2CF1B70583700D991F3 /* TPCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D2CC1B70583700D991F3 /* TPCButton.m */; };
@@ -267,20 +269,24 @@
 		B127949E1B5F8D6B00538C6B /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
 		B127949F1B5F8D6B00538C6B /* NSObject+MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJMember.h"; sourceTree = "<group>"; };
 		B12794A01B5F8D6B00538C6B /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
-		B14205BD1B6F3EA60068DE0F /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
-		B14205BE1B6F3EA60068DE0F /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
+		B14205BD1B6F3EA60068DE0F /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceholderTextView.h; path = ../../PlaceholderTextView.h; sourceTree = "<group>"; };
+		B14205BE1B6F3EA60068DE0F /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceholderTextView.m; path = ../../PlaceholderTextView.m; sourceTree = "<group>"; };
 		B1604DD61B58E8FD008DFE93 /* HWNewfeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWNewfeatureViewController.h; sourceTree = "<group>"; };
 		B1604DD71B58E8FD008DFE93 /* HWNewfeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWNewfeatureViewController.m; sourceTree = "<group>"; };
 		B181D6561B686B60003C7CDA /* HWtoobar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWtoobar.h; sourceTree = "<group>"; };
 		B181D6571B686B60003C7CDA /* HWtoobar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWtoobar.m; sourceTree = "<group>"; };
-		B18F9E711B71B8CD00B94193 /* UIView+KeyboardObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KeyboardObserver.h"; sourceTree = "<group>"; };
-		B18F9E721B71B8CD00B94193 /* UIView+KeyboardObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KeyboardObserver.m"; sourceTree = "<group>"; };
 		B18F9E741B71E68300B94193 /* HWphotoalumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HWphotoalumb.h; path = "../../../../../DDKeyboardObserver-master/DDKeyboardObserver/KeyboardObserver/HWphotoalumb.h"; sourceTree = "<group>"; };
 		B18F9E751B71E68300B94193 /* HWphotoalumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HWphotoalumb.m; path = "../../../../../DDKeyboardObserver-master/DDKeyboardObserver/KeyboardObserver/HWphotoalumb.m"; sourceTree = "<group>"; };
 		B1ADA4F81B65C96B00F990FB /* HWWbstatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWbstatusFrame.h; sourceTree = "<group>"; };
 		B1ADA4F91B65C96B00F990FB /* HWWbstatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWbstatusFrame.m; sourceTree = "<group>"; };
 		B1ADA4FB1B661B5B00F990FB /* HWphoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWphoto.h; sourceTree = "<group>"; };
 		B1ADA4FC1B661B5B00F990FB /* HWphoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWphoto.m; sourceTree = "<group>"; };
+		B1B595081B732E1F00F301A5 /* HWemotionkeyboardview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWemotionkeyboardview.h; sourceTree = "<group>"; };
+		B1B595091B732E1F00F301A5 /* HWemotionkeyboardview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWemotionkeyboardview.m; sourceTree = "<group>"; };
+		B1B5950B1B732E3400F301A5 /* HWemotiontoolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWemotiontoolbar.h; sourceTree = "<group>"; };
+		B1B5950C1B732E3400F301A5 /* HWemotiontoolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWemotiontoolbar.m; sourceTree = "<group>"; };
+		B1B5950E1B732E6500F301A5 /* HWemotionscrollview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWemotionscrollview.h; sourceTree = "<group>"; };
+		B1B5950F1B732E6500F301A5 /* HWemotionscrollview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWemotionscrollview.m; sourceTree = "<group>"; };
 		B1B6D2C71B70583700D991F3 /* TPCSpringMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPCSpringMenu.h; path = "../../../../../../../TPCSpringMenu-master/TPCSpringMenu/TPCSpringMenu/TPCSpringMenu.h"; sourceTree = "<group>"; };
 		B1B6D2C81B70583700D991F3 /* TPCSpringMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPCSpringMenu.m; path = "../../../../../../../TPCSpringMenu-master/TPCSpringMenu/TPCSpringMenu/TPCSpringMenu.m"; sourceTree = "<group>"; };
 		B1B6D2C91B70583700D991F3 /* TPCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPCItem.h; path = "../../../../../../../TPCSpringMenu-master/TPCSpringMenu/TPCSpringMenu/TPCItem.h"; sourceTree = "<group>"; };
@@ -410,7 +416,7 @@
 		18728E5F19E38051008F3BFE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B14205AD1B6F08020068DE0F /* writewb（写微博） */,
+				B19A66461B72F26F006AB28C /* 中间按钮弹出 */,
 				B125880A1B5CE2DB0027D238 /* 登入界面 */,
 				B1604DD41B58E8B1008DFE93 /* Newfeature */,
 				18728E8E19E3D91D008F3BFE /* Discover(发现) */,
@@ -556,6 +562,8 @@
 				B1B6D2CA1B70583700D991F3 /* TPCItem.m */,
 				B1B6D2CB1B70583700D991F3 /* TPCButton.h */,
 				B1B6D2CC1B70583700D991F3 /* TPCButton.m */,
+				B14205BD1B6F3EA60068DE0F /* PlaceholderTextView.h */,
+				B14205BE1B6F3EA60068DE0F /* PlaceholderTextView.m */,
 				B1D5DB3A1B60DB72006432D5 /* MJRefresh */,
 				B12794891B5F8D6B00538C6B /* MJExtension */,
 				B12794541B5F6AB600538C6B /* SDWebImage */,
@@ -829,7 +837,6 @@
 		B14205AD1B6F08020068DE0F /* writewb（写微博） */ = {
 			isa = PBXGroup;
 			children = (
-				B18F9E701B71B8CD00B94193 /* KeyboardObserver */,
 				B1B6D2DE1B70AC7900D991F3 /* control */,
 				B1B6D2DD1B70AC7600D991F3 /* modol */,
 				B1B6D2DC1B70AC7300D991F3 /* view */,
@@ -854,14 +861,28 @@
 			name = Control;
 			sourceTree = "<group>";
 		};
-		B18F9E701B71B8CD00B94193 /* KeyboardObserver */ = {
+		B19A66461B72F26F006AB28C /* 中间按钮弹出 */ = {
 			isa = PBXGroup;
 			children = (
-				B18F9E711B71B8CD00B94193 /* UIView+KeyboardObserver.h */,
-				B18F9E721B71B8CD00B94193 /* UIView+KeyboardObserver.m */,
+				B19A66481B72F2A6006AB28C /* 相机 */,
+				B19A66471B72F285006AB28C /* 相册 */,
+				B14205AD1B6F08020068DE0F /* writewb（写微博） */,
 			);
-			name = KeyboardObserver;
-			path = "../../../../../DDKeyboardObserver-master/DDKeyboardObserver/KeyboardObserver";
+			name = "中间按钮弹出";
+			sourceTree = "<group>";
+		};
+		B19A66471B72F285006AB28C /* 相册 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "相册";
+			sourceTree = "<group>";
+		};
+		B19A66481B72F2A6006AB28C /* 相机 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "相机";
 			sourceTree = "<group>";
 		};
 		B1B6D2DC1B70AC7300D991F3 /* view */ = {
@@ -869,6 +890,12 @@
 			children = (
 				B1B6D2DF1B70ACD900D991F3 /* HWwriteweibotoolbar.h */,
 				B1B6D2E01B70ACD900D991F3 /* HWwriteweibotoolbar.m */,
+				B1B595081B732E1F00F301A5 /* HWemotionkeyboardview.h */,
+				B1B595091B732E1F00F301A5 /* HWemotionkeyboardview.m */,
+				B1B5950B1B732E3400F301A5 /* HWemotiontoolbar.h */,
+				B1B5950C1B732E3400F301A5 /* HWemotiontoolbar.m */,
+				B1B5950E1B732E6500F301A5 /* HWemotionscrollview.h */,
+				B1B5950F1B732E6500F301A5 /* HWemotionscrollview.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -887,8 +914,6 @@
 				B18F9E751B71E68300B94193 /* HWphotoalumb.m */,
 				B1FC75211B6F58D400083182 /* HWComposeViewController.h */,
 				B1FC75221B6F58D400083182 /* HWComposeViewController.m */,
-				B14205BD1B6F3EA60068DE0F /* PlaceholderTextView.h */,
-				B14205BE1B6F3EA60068DE0F /* PlaceholderTextView.m */,
 			);
 			name = control;
 			sourceTree = "<group>";
@@ -1053,7 +1078,6 @@
 				B12794A31B5F8D6B00538C6B /* MJFoundation.m in Sources */,
 				B12794A91B5F8D6B00538C6B /* NSObject+MJCoding.m in Sources */,
 				B127947C1B5F6AB600538C6B /* SDWebImageDownloaderOperation.m in Sources */,
-				B18F9E731B71B8CD00B94193 /* UIView+KeyboardObserver.m in Sources */,
 				B1D5DB501B60DB72006432D5 /* UIScrollView+MJExtension.m in Sources */,
 				B12794511B5F34DF00538C6B /* HWUserinfo.m in Sources */,
 				B12794761B5F6AB600538C6B /* MKAnnotationView+WebCache.m in Sources */,
@@ -1088,10 +1112,12 @@
 				B12794A41B5F8D6B00538C6B /* MJIvar.m in Sources */,
 				18728EC719E3D91D008F3BFE /* HWMessageCenterViewController.m in Sources */,
 				B12794A11B5F8D6B00538C6B /* MJArgument.m in Sources */,
+				B1B5950D1B732E3400F301A5 /* HWemotiontoolbar.m in Sources */,
 				B12794801B5F6AB600538C6B /* UIImage+GIF.m in Sources */,
 				18728EC819E3D91D008F3BFE /* HWProfileViewController.m in Sources */,
 				B12794781B5F6AB600538C6B /* SDImageCache.m in Sources */,
 				B12794771B5F6AB600538C6B /* NSData+ImageContentType.m in Sources */,
+				B1B5950A1B732E1F00F301A5 /* HWemotionkeyboardview.m in Sources */,
 				B1B6D2CF1B70583700D991F3 /* TPCButton.m in Sources */,
 				B1D5DB4C1B60DB72006432D5 /* MJRefreshBaseView.m in Sources */,
 				B1D5DB4E1B60DB72006432D5 /* MJRefreshFooterView.m in Sources */,
@@ -1102,6 +1128,7 @@
 				B12794811B5F6AB600538C6B /* UIImage+MultiFormat.m in Sources */,
 				B1B6D2E11B70ACD900D991F3 /* HWwriteweibotoolbar.m in Sources */,
 				B1B6D2CE1B70583700D991F3 /* TPCItem.m in Sources */,
+				B1B595101B732E6500F301A5 /* HWemotionscrollview.m in Sources */,
 				B1B6D2CD1B70583700D991F3 /* TPCSpringMenu.m in Sources */,
 				B125882A1B5CF3D40027D238 /* AFURLResponseSerialization.m in Sources */,
 				18728EC519E3D91D008F3BFE /* HWAppDelegate.m in Sources */,
